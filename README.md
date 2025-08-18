@@ -16,7 +16,7 @@ It lets you record, manage, and visualize shipwrecks on an interactive map ~ wit
 - 📍 **Interactive Map** – Explore shipwreck locations visually with markers.
 - 📝 **Submission Flow** – Users submit shipwreck data → admins approve → it shows on the map.
 - ⚛️ **Modern Stack** – Built with **React** frontend + **Flask (Python)** backend.
-- 💾 **Self-Hosted** – All data is stored locally, under your control.
+- 💾 **Self-Hosted** – All data is stored locally, under *your* control.
 
 ---
 
