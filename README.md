@@ -67,22 +67,23 @@ Open-Wrecks/
 
 Contributions are welcome!
 
-Fork the project
+1. Fork the project
 
-Create a new branch (feature/my-new-feature)
+2. Create a new branch (feature/my-new-feature)
 
-Commit your changes (git commit -m "Added a cool feature")
+3. Commit your changes (git commit -m "Added a cool feature")
 
-Push to your branch (git push origin feature/my-new-feature)
+4. Push to your branch (git push origin feature/my-new-feature)
 
-Open a Pull Request
+5. Open a Pull Request
 
 ### 📜 License
 
 Open-Wrecks is licensed under the MIT License.
 You’re free to use, modify, and distribute it — just give credit.
 
-🌐 Links
+### 🌐 Links
 
 🐙 GitHub: [Open-Wrecks](https://github.com/alfredredbird/Open-Wrecks)
+📽️ YouTube: [@alfredredbird](https://youtube.com/@alfredredbird)
 📖 Docs: (Coming soon)
