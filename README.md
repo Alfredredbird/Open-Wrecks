@@ -85,5 +85,7 @@ You’re free to use, modify, and distribute it — just give credit.
 ### 🌐 Links
 
 🐙 GitHub: [Open-Wrecks](https://github.com/alfredredbird/Open-Wrecks)
+
 📽️ YouTube: [@alfredredbird](https://youtube.com/@alfredredbird)
+
 📖 Docs: (Coming soon)
