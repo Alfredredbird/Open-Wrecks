@@ -20,13 +20,6 @@ It lets you record, manage, and visualize shipwrecks on an interactive map ~ wit
 
 ---
 
-## 📷 Images
-<img width="2000" height="1326" alt="image" src="https://github.com/user-attachments/assets/c1879238-61c4-4791-ba80-e7a8791f2869" />
-### Example Ship Wreck
-<img width="1685" height="1201" alt="image" src="https://github.com/user-attachments/assets/add78d52-58ff-4a06-ac78-1ad224205c51" />
-
-
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
@@ -83,6 +76,16 @@ Contributions are welcome!
 4. Push to your branch (git push origin feature/my-new-feature)
 
 5. Open a Pull Request
+
+## 📷 Images
+<img width="2000" height="1326" alt="image" src="https://github.com/user-attachments/assets/c1879238-61c4-4791-ba80-e7a8791f2869" />
+
+### Example Ship Wreck
+
+<img width="1685" height="1201" alt="image" src="https://github.com/user-attachments/assets/add78d52-58ff-4a06-ac78-1ad224205c51" />
+
+
+
 
 ### 📜 License
 
