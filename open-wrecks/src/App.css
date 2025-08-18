@@ -1,0 +1,188 @@
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.search-bar {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+}
+
+/* Layout */
+.app-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ship-widget {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.2s;
+}
+
+.ship-widget:hover {
+  transform: scale(1.03);
+}
+
+.ship-widget h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.ship-widget-img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.buttons {
+  margin-top: auto;
+}
+
+.buttons button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Map */
+.map-container {
+  flex: 1;
+}
+/* Overlay widget for login/signup */
+.overlay-widget {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-widget input {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.overlay-widget button {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.bottom-left-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.bottom-left-buttons button {
+  padding: 5px 10px;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50; /* green success */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+  font-weight: bold;
+  animation: fadeInOut 0.5s;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+.profile-card {
+  position: absolute;
+  bottom: 60px; /* above buttons */
+  left: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.profile-card button {
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.carousel-controls button {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.carousel-controls span {
+  font-size: 12px;
+}

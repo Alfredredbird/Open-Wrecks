@@ -1,0 +1,7 @@
+{
+    "session": "admin-session-token",
+    "updates": {
+        "title": "New Ship Name",
+        "country": "UK"
+    }
+}

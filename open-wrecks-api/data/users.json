@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "username": "adminuser",
+    "password": "123456",
+    "email": "admin@site.com",
+    "name": "Admin User",
+    "country": "US",
+    "session": "uuid-session-token",
+    "admin": true
+  },
+  {
+    "username": "alfredredbird",
+    "password": "12345",
+    "email": "alfred@mail.co",
+    "name": "alfred",
+    "country": "US",
+    "id": 2,
+    "session": "9256e289-8e04-46c2-825c-a6119a21a143",
+    "admin": true
+  }
+]
