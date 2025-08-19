@@ -193,6 +193,43 @@ def approve(item_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/api/reject/<int:item_id>", methods=["POST"])
+def reject(item_id):
+    try:
+        data = request.get_json()
+        if not data or "session" not in data:
+            return jsonify({"error": "Session token required"}), 400
+
+        session_token = data["session"]
+
+        # Check admin
+        with open(ACCOUNT_FILE, "r") as f:
+            users = json.load(f)
+
+        user = next((u for u in users if u.get("session") == session_token), None)
+        if not user:
+            return jsonify({"error": "Invalid session token"}), 403
+        if not user.get("admin", False):
+            return jsonify({"error": "You are not authorized to reject items"}), 403
+
+        # Load pending
+        with open(PENDING_FILE, "r") as f:
+            pending_data = json.load(f)
+
+        item_index = next((i for i, ship in enumerate(pending_data) if ship["id"] == item_id), None)
+        if item_index is None:
+            return jsonify({"error": "Item not found in pending data"}), 404
+
+        # Remove rejected item
+        rejected_item = pending_data.pop(item_index)
+        with open(PENDING_FILE, "w") as f:
+            json.dump(pending_data, f, indent=2)
+
+        return jsonify({"message": f"Item {item_id} rejected and removed successfully!", "item": rejected_item}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route("/api/pending", methods=["POST"])
 def submit_shipwreck():
     try:
@@ -223,6 +260,7 @@ def submit_shipwreck():
             "title": data.get("title", ""),
             "lat": float(data.get("lat", 0)),
             "lng": float(data.get("lng", 0)),
+            "imo": int(data.get("imo")),
             "description": data.get("description", ""),
             "images": data.get("images", []),
             "links": data.get("links", []),
@@ -248,6 +286,14 @@ def get_ships():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/api/pending", methods=["GET"])
+def get_pending():
+    try:
+        with open(PENDING_FILE, "r") as f:
+            pending_data = json.load(f)
+        return jsonify(pending_data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

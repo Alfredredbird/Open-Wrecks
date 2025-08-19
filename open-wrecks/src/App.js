@@ -45,6 +45,8 @@ function App() {
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
+  const [pendingShips, setPendingShips] = useState([]); // NEW
+  const [showPending, setShowPending] = useState(false); // NEW
 
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [signupData, setSignupData] = useState({
@@ -59,6 +61,7 @@ function App() {
   title: "",
   lat: "",
   lng: "",
+  imo: "",
   description: "",
   images: "",
   links: ""
@@ -133,8 +136,15 @@ function App() {
   }
 };
 
+const fetchPending = () => {
+    fetch("http://127.0.0.1:5000/api/pending")
+      .then(res => res.json())
+      .then(data => setPendingShips(data))
+      .catch(err => console.error("Failed to fetch pending:", err));
+  };
+
 const handleContactSupport = () => {
-  window.location.href = "mailto:support@open-wrecks.com";
+  window.location.href = "we got no email. go to the github page";
 };
 
 
@@ -171,7 +181,8 @@ const handleContactSupport = () => {
           lng: "",
           description: "",
           images: "",
-          links: ""
+          links: "",
+          imo: ""
         });
       } else {
         // Show error from backend
@@ -262,6 +273,18 @@ const handleContactSupport = () => {
               <button onClick={() => setShowSignup(true)}>Signup</button>
             </div>
           )}
+           {/* ADMIN BUTTON */}
+          {account?.admin && (
+            <button
+              style={{ marginTop: "20px", background: "darkred", color: "white" }}
+              onClick={() => {
+                fetchPending();
+                setShowPending(true);
+              }}
+            >
+              Review Pending Ships
+            </button>
+          )}
         </div>
 
         {/* Map */}
@@ -337,6 +360,76 @@ const handleContactSupport = () => {
 
         </div>
       </div>
+      {showPending && account?.admin && (
+  <div className="overlay-widget">
+    <h2>Pending Ships</h2>
+    {pendingShips.length === 0 ? (
+      <p>No pending ships.</p>
+    ) : (
+      pendingShips.map((ship) => (
+  <div key={ship.id} className="pending-ship-card">
+    <h3>{ship.title || "Untitled"}</h3>
+    <p><strong>ID:</strong> {ship.id}</p>
+    <p><strong>Submitted By:</strong> {ship.submitted_by}</p>
+    {ship.imo && <p><strong>IMO:</strong> {ship.imo}</p>}
+    <p><strong>Coordinates:</strong> {ship.lat}, {ship.lng}</p>
+
+    {/* Description */}
+    {ship.description && <ReactMarkdown>{ship.description}</ReactMarkdown>}
+
+    {/* Links */}
+    {ship.links?.length > 0 && (
+      <ul>
+        {ship.links.map((link, i) =>
+          link ? (
+            <li key={i}>
+              <a href={link} target="_blank" rel="noreferrer">{link}</a>
+            </li>
+          ) : null
+        )}
+      </ul>
+    )}
+
+    {/* Approve/Reject buttons */}
+    <div style={{ marginTop: "10px" }}>
+      <button
+        style={{ background: "green", color: "white", marginRight: "10px" }}
+        onClick={async () => {
+  const session = Cookies.get("session"); 
+  await fetch(`http://127.0.0.1:5000/api/approve/${ship.id}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ session }),
+  });
+  fetchPending(); // refresh list
+}}
+
+      >
+        Approve
+      </button>
+      <button
+        style={{ background: "darkred", color: "white" }}
+        onClick={async () => {
+  const session = Cookies.get("session"); 
+  await fetch(`http://127.0.0.1:5000/api/reject/${ship.id}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ session }),
+  });
+  fetchPending();
+}}
+
+      >
+        Reject
+      </button>
+    </div>
+  </div>
+))
+
+    )}
+    <button onClick={() => setShowPending(false)}>Close</button>
+  </div>
+)}
 
       {/* Login Widget */}
       {showLogin && !account && (
@@ -383,6 +476,12 @@ const handleContactSupport = () => {
       placeholder="Longitude"
       value={submitData.lng}
       onChange={(e) => setSubmitData({...submitData, lng: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="IMO Number (if any)"
+      value={submitData.imo}
+      onChange={(e) => setSubmitData({...submitData, imo: e.target.value})}
     />
     <textarea
       placeholder="Description (Markdown)"
