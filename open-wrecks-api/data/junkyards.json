@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Alang Ship Breaking Yard",
+    "country": "India",
+    "lat": 21.5887,
+    "lng": 70.2233,
+    "description": "Located in Bhavnagar, Gujarat, Alang is the world's largest shipbreaking yard, dismantling over 300 ships annually, including supertankers and cruise liners. Established in 1983, it has grown to include the Alang-Sosiya Yard, comprising 183 plots with a combined capacity of 4.5 million Light Displacement Tonnage (LDT). The yard employs over 15,000 workers and handles about 98% of India's ship recycling activities. :contentReference[oaicite:0]{index=0}",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Shipwrecking_in_Alang%2C_India%2C_2017-03-23_by_Planet_Labs.jpg/250px-Shipwrecking_in_Alang%2C_India%2C_2017-03-23_by_Planet_Labs.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Calendar_2020_%2864%29.jpg/250px-Calendar_2020_%2864%29.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Alang_Ship_Breaking_Yard"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Chattogram Ship Breaking Yard",
+    "country": "Bangladesh",
+    "lat": 22.4424,
+    "lng": 91.7320,
+    "description": "Situated in Sitakunda, near Chattogram, this yard is one of the largest in the world, handling about a fifth of global ship recycling. With approximately 184 yards and 15,000 workers, it stretches over 15–22 km of coastline. Despite its scale, the industry faces significant environmental and labor challenges. :contentReference[oaicite:1]{index=1}",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ship_Breaking_by_Gas_Cutting_in_Bhatiary_Yard_01%2C_Chittagong_Bangladesh.jpg/250px-Ship_Breaking_by_Gas_Cutting_in_Bhatiary_Yard_01%2C_Chittagong_Bangladesh.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jafrabad_Chittagong_shipbreaking_%288%29.JPG/330px-Jafrabad_Chittagong_shipbreaking_%288%29.JPG"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Chittagong_Ship_Breaking_Yard"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Gadani Ship Breaking Yard",
+    "country": "Pakistan",
+    "lat": 25.0700,
+    "lng": 66.9880,
+    "description": "Located in Balochistan, Gadani was once the world's largest shipbreaking yard in the 1980s, with over 30,000 workers. Today, it has 132 plots along a 10 km beachfront and employs around 6,000 workers. The yard recycles over 1 million tons of steel annually and is known for its efficiency, dismantling large vessels in 30–45 days. :contentReference[oaicite:2]{index=2}",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gadani_ship_breaking_%282016%29.jpg/250px-Gadani_ship_breaking_%282016%29.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Gadani_Ship_Breaking_Yard"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sakai Ship Recycling Yard",
+    "country": "Japan",
+     "lat": 34.5650,
+    "lng": 135.4500,
+    "description": "Japan's Sakai Ship Recycling Yard is a model of environmentally responsible ship recycling. It adheres to stringent safety and environmental standards, aligning with international conventions such as the EU Ship Recycling Regulation and the Hong Kong Convention. The yard is part of Japan's efforts to promote decarbonization and a circular economy in ship recycling. :contentReference[oaicite:3]{index=3}",
+    "images": [
+
+    ],
+    "links": [
+      "https://www.nyk.com/english/stories/04/01/20250530.html",
+      "https://www.classnk.or.jp/classnk-rd/assets/pdf/katsudou201605_E.pdf"
+    ]
+  }
+]

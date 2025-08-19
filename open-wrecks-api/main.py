@@ -8,6 +8,9 @@ app = Flask(__name__)
 PENDING_FILE = "data/pending.json"
 APPROVED_FILE = "data/approved.json"
 ACCOUNT_FILE = "data/users.json"
+JUNKYARD_FILE = "data/junkyards.json"
+
+
 CORS(app)
 # Ensure data files exist
 os.makedirs("data", exist_ok=True)
@@ -299,6 +302,23 @@ def get_pending():
         return jsonify(pending_data), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+
+
+if not os.path.exists(JUNKYARD_FILE):
+    with open(JUNKYARD_FILE, "w") as f:
+        json.dump([], f)
+
+@app.route("/api/yards", methods=["GET"])
+def get_yards():
+    try:
+        with open(JUNKYARD_FILE, "r") as f:
+            ports_data = json.load(f)
+        return jsonify(ports_data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)

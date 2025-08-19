@@ -41,13 +41,17 @@ function App() {
   const [flyPosition, setFlyPosition] = useState(null);
   const [notification, setNotification] = useState("");
   const [showProfileCard, setShowProfileCard] = useState(false);
-
+  const [showOptions, setShowOptions] = useState(false);
+  const [showPorts, setShowPorts] = useState(false);
+  const [showCoordinates, setShowCoordinates] = useState(false);
+  const [showMarkers, setShowMarkers] = useState(true);
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
-  const [pendingShips, setPendingShips] = useState([]); // NEW
-  const [showPending, setShowPending] = useState(false); // NEW
-
+  const [pendingShips, setPendingShips] = useState([]); 
+  const [showPending, setShowPending] = useState(false); 
+  // this is really junk yards. idk why i used ports
+  const [ports, setPorts] = useState([]);
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [signupData, setSignupData] = useState({
     username: "",
@@ -68,10 +72,17 @@ function App() {
 });
 
   const boatIcon = new L.Icon({
-  iconUrl: 'boat.png', // Make sure to update the path to your boat image
-  iconSize: [32, 32],  // Size of the icon (you can adjust this)
-  iconAnchor: [16, 32], // Anchor of the icon
-  popupAnchor: [0, -32], // Popup position
+  iconUrl: 'boat.png',
+  iconSize: [32, 32], 
+  iconAnchor: [16, 32], 
+  popupAnchor: [0, -32],
+});
+
+  const junkyardIcon = L.icon({
+  iconUrl: "warning.png", 
+  iconSize: [32, 32],             
+  iconAnchor: [16, 32],           
+  popupAnchor: [0, -32]           
 });
 
   const [message, setMessage] = useState("");
@@ -79,6 +90,17 @@ function App() {
   // Account info
   const [account, setAccount] = useState(null);
 
+  // Fetch ports whenever showPorts is toggled on
+  useEffect(() => {
+  if (showPorts) {
+    fetch("http://127.0.0.1:5000/api/yards")
+      .then(res => res.json())
+      .then(data => setPorts(data))
+      .catch(err => console.error("Failed to fetch junk yards:", err));
+  } else {
+    setPorts([]); // clear ports when hidden
+  }
+}, [showPorts]);
   // Fetch ships
   useEffect(() => {
     fetch("http://127.0.0.1:5000/api/ships")
@@ -304,37 +326,59 @@ const handleContactSupport = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
             {flyPosition && <FlyToPosition position={flyPosition} zoom={6} />}
-            {ships.map((ship) => (
-              <Marker key={ship.id} position={[ship.lat, ship.lng]} icon={boatIcon}>
-                <Popup>
-                  <h3>{ship.title}</h3>
-                  {ship.images && ship.images.length > 0 && (
-  <ImageCarousel images={ship.images} />
-)}
-
-                  {ship.description && (
-                    <div style={{ marginTop: "10px" }}>
-                      <ReactMarkdown>{ship.description}</ReactMarkdown>
-                    </div>
-                  )}
-                  {ship.links && (
-                    <div style={{ marginTop: "10px" }}>
-                      {ship.links.map((link, i) => (
-                        <div key={i}>
-                          <a
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {link}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </Popup>
-              </Marker>
+            {showMarkers &&
+  ships.map((ship) => (
+    <Marker key={ship.id} position={[ship.lat, ship.lng]} icon={boatIcon}>
+      <Popup>
+        <h3>{ship.title}</h3>
+        {ship.images && ship.images.length > 0 && <ImageCarousel images={ship.images} />}
+        {ship.description && (
+          <div style={{ marginTop: "10px" }}>
+            <ReactMarkdown>{ship.description}</ReactMarkdown>
+          </div>
+        )}
+        {ship.links && (
+          <div style={{ marginTop: "10px" }}>
+            {ship.links.map((link, i) => (
+              <div key={i}>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {link}
+                </a>
+              </div>
             ))}
+          </div>
+        )}
+      </Popup>
+    </Marker>
+  ))
+}
+        {showPorts && ports.map((port) => (
+  <Marker
+    key={`port-${port.id}`}
+    position={[port.lat, port.lng]}
+    icon={junkyardIcon}
+  >
+    <Popup>
+      <h3>{port.title}</h3>
+      {port.images && port.images.length > 0 && <ImageCarousel images={port.images} />}
+      {port.description && (
+        <div style={{ marginTop: "10px" }}>
+          <ReactMarkdown>{port.description}</ReactMarkdown>
+        </div>
+      )}
+      {port.links && (
+        <div style={{ marginTop: "10px" }}>
+          {port.links.map((link, i) => (
+            <div key={i}>
+              <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+            </div>
+          ))}
+        </div>
+      )}
+    </Popup>
+  </Marker>
+))}
+
           </MapContainer>
           {account && (
   <div className="bottom-left-buttons">
@@ -347,6 +391,7 @@ const handleContactSupport = () => {
   <div className="bottom-left-buttons">
     <span>Welcome {account.username}</span>
     <button onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
+    <button onClick={() => setShowOptions(!showOptions)}>Options</button> 
     <button onClick={() => setShowProfileCard(!showProfileCard)}>Profile</button>
     <button onClick={handleLogout}>Logout</button>
 
@@ -358,6 +403,21 @@ const handleContactSupport = () => {
         <button onClick={handleContactSupport}>Contact Support</button>
       </div>
     )}
+    {/* Options Sidebar */}
+{showOptions && (
+  <div className="options-sidebar">
+    <h3>Options</h3>
+    <button onClick={() => setShowPorts(!showPorts)}>
+      {showPorts ? "Hide Junk Yards" : "Show Junk Yards"}
+    </button>
+    <button onClick={() => setShowCoordinates(!showCoordinates)}>
+      {showCoordinates ? "Hide Coordinates" : "Show Coordinates"}
+    </button>
+    <button onClick={() => setShowMarkers(!showMarkers)}>
+      {showMarkers ? "Hide Markers" : "Show Markers"}
+    </button>
+  </div>
+)}
   </div>
 )}
 

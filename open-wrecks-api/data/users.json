@@ -16,7 +16,16 @@
     "name": "alfred",
     "country": "US",
     "id": 2,
-    "session": "c0a309c5-31a0-4057-b6ad-13dc249050f0",
+    "session": "bdaf45a9-02f4-457d-b891-734408472d98",
     "admin": true
+  },
+  {
+    "username": "bob",
+    "password": "bob",
+    "email": "bob@bob.bob",
+    "name": "bob",
+    "country": "US",
+    "id": 3,
+    "session": "dfe1823a-308c-4f38-9f6d-d8d1ada948e4"
   }
 ]
