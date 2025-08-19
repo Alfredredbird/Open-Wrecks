@@ -15,7 +15,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Sierra Madre",
     "lat": 9.7909,
     "lng": 115.8566,
@@ -29,7 +29,7 @@
     "submitted_by": "alfredredbird"
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "Lepanto",
     "lat": -8.67467,
     "lng": 13.41629,
@@ -48,7 +48,7 @@
     "submitted_by": "alfredredbird"
   },
   {
-    "id": 1,
+    "id": 4,
     "title": "Thames sailing barge ardleigh",
     "lat": 51.72475,
     "lng": 0.69817,
@@ -64,7 +64,7 @@
     "submitted_by": "alfredredbird"
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "SA Barge",
     "lat": 41.682257,
     "lng": -71.39735,
@@ -80,7 +80,7 @@
     "submitted_by": "alfredredbird"
   },
   {
-    "id": 1,
+    "id": 6,
     "title": "Titan Submersible Implosion",
     "lat": 41.7344,
     "lng": -49.9424,
@@ -92,6 +92,25 @@
     ],
     "links": [
       "https://en.wikipedia.org/wiki/Titan_submersible_implosion"
+    ],
+    "submitted_by": "alfredredbird"
+  },
+  {
+    "id": 7,
+    "title": "Bugged! USS YOG-42 (YOGN-42)",
+    "lat": 20.8781,
+    "lng": 156.9465,
+    "imo": 0,
+    "description": "# USS YOG-42 (YOGN-42) \n\n**Type:** Gasoline Barge (Non-self-propelled, Maritime Commission type B7-A2, MC 638)  \n**Builder:** Concrete Ship Constructors, National City, California  \n**Yard Number:** 5  \n**Laid Down:** December 6, 1942  \n**Launched:** March 23, 1943  \n**Acquired by US Navy:** May 23, 1943  \n**Out of Service:** 1949  \n**Re-designated:** YOGN-42 in May 1946  \n**Fate:** Intentionally beached on the north coast of L\u0101na\u02bbi, Hawaiian Islands (1949\u20131950)\n\n---\n\n## Specifications\n\n- **Displacement:** 5,410 t (light), 6,600 t (full)  \n- **Length:** 375 ft (114 m)  \n- **Beam:** 56 ft (17 m)  \n- **Draft:** 26.6 ft (8.1 m)  \n- **Propulsion:** None  \n- **Crew:** ~22  \n- **Armament:** Four Oerlikon 20 mm cannons (as built)\n\n---\n\n## History\n\nUSS YOG-42 was built as Concrete No. 5, a non-self-propelled gasoline barge. She was assigned to the Asiatic-Pacific Theater during World War II and survived the war, supplying gasoline throughout the conflict.\n\n- **Notable Incident:** On September 12, 1943, while being towed by USS Navajo (AT-64), the tug was sunk by Japanese submarine I-39. YOG-42 remained undamaged and was recovered by USS Sioux (AT-75).  \n\nAfter the war, she was re-designated YOGN-42 in May 1946, struck from the Naval Register on August 15, 1949, and intentionally beached on L\u0101na\u02bbi for preservation.\n\n---\n\n## Shipwreck Location\n\n- **Coordinates:** 20.8781\u00b0N, 156.9465\u00b0W  \n- **Location:** North coast of L\u0101na\u02bbi, Hawaiian Islands  \n- **Status:** Visible wreck, recommended for protection as a historic site  \n\n---",
+    "images": [
+      "https://i.redd.it/zw8balbtxmgf1.jpeg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Yog42a-139.jpg/330px-Yog42a-139.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shipwreck_-_Shipwreck_Beach.jpg/250px-Shipwreck_-_Shipwreck_Beach.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Yog42a-140.jpg/250px-Yog42a-140.jpg"
+    ],
+    "links": [
+      "https://www.reddit.com/r/Shipwrecks/comments/1mfv663/yogn2_kaiolohia/",
+      "https://en.m.wikipedia.org/wiki/YOG%E2%80%9342"
     ],
     "submitted_by": "alfredredbird"
   }

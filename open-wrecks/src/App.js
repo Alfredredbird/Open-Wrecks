@@ -250,22 +250,26 @@ const handleContactSupport = () => {
         {/* Sidebar */}
         <div className="sidebar">
           <h2>Latest Ships</h2>
-          {filteredShips.map((ship) => (
-            <div
-              key={ship.id}
-              className="ship-widget"
-              onClick={() => handleShipClick(ship)}
-            >
-              <h3>{ship.title}</h3>
-              {ship.images && ship.images[0] && (
-                <img
-                  src={ship.images[0]}
-                  alt={ship.title}
-                  className="ship-widget-img"
-                />
-              )}
-            </div>
-          ))}
+          {[...filteredShips]
+  .sort((a, b) => b.id - a.id) // sort descending by ID
+  .slice(0, 6) // take top 6
+  .map((ship) => (
+    <div
+      key={ship.id}
+      className="ship-widget"
+      onClick={() => handleShipClick(ship)}
+    >
+      <h3>{ship.title}</h3>
+      {ship.images && ship.images[0] && (
+        <img
+          src={ship.images[0]}
+          alt={ship.title}
+          className="ship-widget-img"
+        />
+      )}
+    </div>
+))}
+
 
           {!account && (
             <div className="buttons">

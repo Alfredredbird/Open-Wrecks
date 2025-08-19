@@ -251,9 +251,14 @@ def submit_shipwreck():
         with open(PENDING_FILE, "r") as f:
             pending_data = json.load(f)
 
-        # Generate a new ID
-        max_id = max([item.get("id", 0) for item in pending_data], default=0)
-        new_id = max_id + 1
+        # Load approved.json
+        with open(APPROVED_FILE, "r") as f:
+            approved_data = json.load(f)
+
+        # Generate a new ID based on max ID across both pending and approved
+        all_ids = [item.get("id", 0) for item in pending_data + approved_data]
+        new_id = max(all_ids, default=0) + 1
+
 
         new_ship = {
             "id": new_id,
