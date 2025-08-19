@@ -371,13 +371,14 @@ const handleContactSupport = () => {
     <h3>{ship.title || "Untitled"}</h3>
     <p><strong>ID:</strong> {ship.id}</p>
     <p><strong>Submitted By:</strong> {ship.submitted_by}</p>
-    {ship.imo && <p><strong>IMO:</strong> {ship.imo}</p>}
+    <p><strong>IMO:</strong> {ship.imo}</p>
     <p><strong>Coordinates:</strong> {ship.lat}, {ship.lng}</p>
-
+    <p><strong>Bio:</strong></p>
     {/* Description */}
     {ship.description && <ReactMarkdown>{ship.description}</ReactMarkdown>}
 
     {/* Links */}
+    <p><strong>Links:</strong></p>
     {ship.links?.length > 0 && (
       <ul>
         {ship.links.map((link, i) =>
