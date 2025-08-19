@@ -337,17 +337,24 @@ const handleContactSupport = () => {
             <ReactMarkdown>{ship.description}</ReactMarkdown>
           </div>
         )}
-        {ship.links && (
-          <div style={{ marginTop: "10px" }}>
-            {ship.links.map((link, i) => (
-              <div key={i}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  {link}
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
+        <div style={{ marginTop: "10px" }}>
+  {ship.links && ship.links.map((link, i) => (
+    <div key={i}>
+      <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+    </div>
+  ))}
+  <div>
+    <a
+      href={`https://www.google.com/maps?q=${ship.lat},${ship.lng}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="map-link"
+    >
+      View on Google Maps
+    </a>
+  </div>
+</div>
+
       </Popup>
     </Marker>
   ))
@@ -359,22 +366,31 @@ const handleContactSupport = () => {
     icon={junkyardIcon}
   >
     <Popup>
-      <h3>{port.title}</h3>
+      <h3>{port.name}</h3>
       {port.images && port.images.length > 0 && <ImageCarousel images={port.images} />}
       {port.description && (
         <div style={{ marginTop: "10px" }}>
           <ReactMarkdown>{port.description}</ReactMarkdown>
         </div>
       )}
-      {port.links && (
-        <div style={{ marginTop: "10px" }}>
-          {port.links.map((link, i) => (
-            <div key={i}>
-              <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
-            </div>
-          ))}
-        </div>
-      )}
+      <div style={{ marginTop: "10px" }}>
+  {port.links && port.links.map((link, i) => (
+    <div key={i}>
+      <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+    </div>
+  ))}
+  <div>
+    <a
+      href={`https://www.google.com/maps?q=${port.lat},${port.lng}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="map-link"
+    >
+      View on Google Maps
+    </a>
+  </div>
+</div>
+
     </Popup>
   </Marker>
 ))}

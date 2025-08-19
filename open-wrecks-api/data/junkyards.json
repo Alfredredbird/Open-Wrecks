@@ -57,5 +57,83 @@
       "https://www.nyk.com/english/stories/04/01/20250530.html",
       "https://www.classnk.or.jp/classnk-rd/assets/pdf/katsudou201605_E.pdf"
     ]
+  },
+    {
+    "id": 5,
+    "name": "Aliağa Ship Recycling Yard",
+    "country": "Turkey",
+    "lat": 38.8286,
+    "lng": 26.9308,
+    "description": "Located on a 10 km beachfront, Aliağa is one of the world's largest shipbreaking yards, consisting of 132 plots operated by 22 companies. It employs around 1,200 workers and utilizes the 'landing method' for ship recycling. ",
+    "images": [],
+    "links": [
+      "https://en.wikipedia.org/wiki/Aliaga_Ship_Breaking_Yard"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Mumbai / Dharamtar Ship Recycling Yard",
+    "country": "India",
+    "lat": 18.9167,
+    "lng": 72.6667,
+    "description": "Situated on the banks of the Amba River, approximately 23 nautical miles from Mumbai Harbour, Dharamtar Port is a tri-modal port handling bulk and break-bulk transportation. It also carries out transshipment of containers. ",
+    "images": [],
+    "links": [
+      "https://en.wikipedia.org/wiki/Dharamtar_Port"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "KR Ship Recycling Yard",
+    "country": "South Korea",
+    "lat": 34.9611,
+    "lng": 128.1111,
+    "description": "KR Ship Recycling Yard is one of the leading facilities in South Korea, focusing on environmentally responsible ship recycling practices.",
+    "images": [],
+    "links": [
+      "https://krshiprecycling.com/ship-recycling/"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Zhoushan Ship Recycling Yard",
+    "country": "China",
+    "lat": 29.9856,
+    "lng": 122.2075,
+    "description": "Situated along the Yangtze River and on Zhoushan Island, this yard is one of China's major ship recycling facilities. It has the capacity to recycle a substantial amount of large vessels alongside piers and in docks.",
+    "images": [],
+    "links": [
+      "https://shipbreakingplatform.org/our-work/the-problem/china/"
+    ]
+  },
+   {
+    "id": 9,
+    "name": "Alang-Sosiya Extension",
+    "country": "India",
+    "lat": 21.5887,
+    "lng": 70.2235,
+    "description": "An extension of the main Alang yard, focused on increasing capacity and improving environmental management.",
+    "images": [],
+    "links": []
+  },
+  {
+    "id": 10,
+    "name": "Santos Ship Recycling Yard",
+    "country": "Brazil",
+    "lat": -23.9530,
+    "lng": -46.3336,
+    "description": "South America's largest ship recycling facility, handling mainly smaller vessels.",
+    "images": [],
+    "links": []
+  },
+  {
+    "id": 11,
+    "name": "Aliaga-Çandarl Expansion",
+    "country": "Turkey",
+    "lat": 38.8500,
+    "lng": 26.9500,
+    "description": "An EU-compliant expansion of the Aliağa yard, adding modern recycling facilities.",
+    "images": [],
+    "links": []
   }
 ]

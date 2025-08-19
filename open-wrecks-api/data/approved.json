@@ -6,12 +6,13 @@
     "lng": -49.9469,
     "links": [
       "https://en.wikipedia.org/wiki/RMS_Titanic",
-      "https://www.history.com/topics/early-20th-century-us/rms-titanic"
+      "https://www.history.com/articles/titanic"
     ],
     "description": "The **RMS Titanic** was a British passenger liner that sank in the North Atlantic Ocean on April 15, 1912.\n\n### Facts:\n- Maiden voyage: 10 April 1912\n- Passengers: 2,224\n- Casualties: 1,517\n\nThe wreck was discovered in 1985 and lies at a depth of about 12,500 feet.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/f/fd/RMS_Titanic_3.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/3/3c/Olympic_stern_and_rudder.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/3/3c/Olympic_stern_and_rudder.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/250px-Titanic_wreck_bow.jpg"
     ]
   },
   {
@@ -19,12 +20,17 @@
     "title": "Sierra Madre",
     "lat": 9.7909,
     "lng": 115.8566,
-    "description": "# Sierra Madre (USS Sierra Madre)\n\nThe **USS Sierra Madre (AD-18)** was a United States Navy ship that played a pivotal role during and after World War II. Built in the early 1940s, it was originally a **destroyer tender** designed to provide maintenance and support for naval destroyers and smaller ships.\n\n### Key Facts:\n- **Launched**: 1943\n- **Type**: Destroyer tender\n- **Length**: 531 feet (162 meters)\n- **Service**: 1944\u20131960 (U.S. Navy), later transferred to the Philippines\n\n### Sinking Incident:\nThe **USS Sierra Madre** was decommissioned and sold to the Philippines, where it was renamed **BRP Sierra Madre**. In 1999, the Philippine Navy intentionally grounded the vessel at **Second Thomas Shoal**, located at approximately 9\u00b0 47\u2032 27.4\u2033 N, 115\u00b0 51\u2032 23.7\u2033 E, in the South China Sea. The grounding was a strategic move to assert territorial claims in the area.\n\nOver the years, the ship has deteriorated due to natural elements, but it remains a significant symbol of the ongoing territorial dispute in the region.\n\n### Current Status:\nThe **BRP Sierra Madre** is still stationed at **Second Thomas Shoal**, serving as a military outpost and a reminder of the geopolitical tensions in the South China Sea.\n",
+    "description": "# Sierra Madre (originally the USS LST-821)\n\nThe **USS Sierra Madre (AD-18)** was a United States Navy ship that played a pivotal role during and after World War II. Built in the early 1940s, it was originally a **destroyer tender** designed to provide maintenance and support for naval destroyers and smaller ships.\n\n### Key Facts:\n- **Launched**: 1943\n- **Type**: Destroyer tender\n- **Length**: 531 feet (162 meters)\n- **Service**: 1944\u20131960 (U.S. Navy), later transferred to the Philippines\n\n### Sinking Incident:\nThe **USS Sierra Madre** was decommissioned and sold to the Philippines, where it was renamed **BRP Sierra Madre**. In 1999, the Philippine Navy intentionally grounded the vessel at **Second Thomas Shoal**, located at approximately 9\u00b0 47\u2032 27.4\u2033 N, 115\u00b0 51\u2032 23.7\u2033 E, in the South China Sea. The grounding was a strategic move to assert territorial claims in the area.\n\nOver the years, the ship has deteriorated due to natural elements, but it remains a significant symbol of the ongoing territorial dispute in the region.\n\n### Current Status:\nThe **BRP Sierra Madre** is still stationed at **Second Thomas Shoal**, serving as a military outpost and a reminder of the geopolitical tensions in the South China Sea.\n",
     "images": [
-      "https://preview.redd.it/sierra-madre-on-google-maps-v0-4fnts38bhmgf1.png?width=640&crop=smart&auto=webp&s=b79568c7ee5c2af5767879b3ed51b7830a255250"
+      "https://preview.redd.it/sierra-madre-on-google-maps-v0-4fnts38bhmgf1.png?width=640&crop=smart&auto=webp&s=b79568c7ee5c2af5767879b3ed51b7830a255250",
+      "https://www.usni.org/sites/default/files/styles/hero_image/public/navalhistory/01PHILIPPINES-master675.jpg?itok=DaMHaQlw",
+      "https://www.usni.org/sites/default/files/styles/embed_medium/public/navalhistory/harnettcountyoffsandiego10-18-66-sm.jpg?itok=n8JVlRjV",
+      "https://www.usni.org/sites/default/files/styles/embed_medium/public/navalhistory/usslct8211945-sm.jpg?itok=XDmPyguH",
+      "https://www.usni.org/sites/default/files/styles/embed_medium/public/US-MdAnUSNI-192006002.jpg?itok=1r9Yq6gi"
     ],
     "links": [
-      "https://www.reddit.com/r/Shipwrecks/comments/1mfsyb5/sierra_madre_on_google_maps/"
+      "https://www.reddit.com/r/Shipwrecks/comments/1mfsyb5/sierra_madre_on_google_maps/",
+      "https://www.usni.org/magazines/naval-history-magazine/2022/february/measure-sierra-madre"
     ],
     "submitted_by": "alfredredbird"
   },

@@ -213,3 +213,11 @@
   font-size: 14px;
   cursor: pointer;
 }
+.map-link {
+  color: #1E90FF;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.map-link:hover {
+  color: #FF4500; 
+}
