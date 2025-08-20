@@ -13,13 +13,10 @@ It lets you record, manage, and visualize shipwrecks on an interactive map ~ wit
 
 ## ⚡ Features
 - 🔐 **Account System** – Sign up, log in, and manage submissions.
-- 🗺️ **Interactive Map** – Explore shipwreck locations visually with markers.
-- 📍 **Point Measurement System** – To measure the distance between ships/points.
+- 📍 **Interactive Map** – Explore shipwreck locations visually with markers.
 - 📝 **Submission Flow** – Users submit shipwreck data → admins approve → it shows on the map.
 - ⚛️ **Modern Stack** – Built with **React** frontend + **Flask (Python)** backend.
-- 🗾 **Updated Info** – Comes with 9 ship recycling yards and tons of ships.
 - 💾 **Self-Hosted** – All data is stored locally, under *your* control.
-- 🛠️ **Constant Updates** – I plan to update this project as much as possible.
 
 ---
 
@@ -40,7 +37,7 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-Runs on: http://127.0.0.1:5000 or local IP
+Runs on: http://127.0.0.1:5000
 
 ### 3. Frontend (React UI)
 ```bash
@@ -48,7 +45,7 @@ cd open-wrecks
 npm install
 npm start
 ```
-Runs on: http://127.0.0.1:3000 or local IP
+Runs on: http://127.0.0.1:3000
 
 ### 📂 Project Structure
 For those who are wondering!
@@ -87,6 +84,7 @@ Contributions are welcome!
 
 <img width="1685" height="1201" alt="image" src="https://github.com/user-attachments/assets/add78d52-58ff-4a06-ac78-1ad224205c51" />
 
+<img width="3716" height="2010" alt="image" src="https://github.com/user-attachments/assets/c64089b2-5ed8-4508-a086-5f9c58e87614" />
 
 
 
