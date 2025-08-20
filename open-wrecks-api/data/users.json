@@ -1,31 +1,12 @@
 [
   {
+    "username": "explorer",
+    "password": "DeepSea",
+    "email": "explorer@fakemail.co",
+    "name": "explorer",
+    "country": "US",
     "id": 1,
-    "username": "adminuser",
-    "password": "123456",
-    "email": "admin@site.com",
-    "name": "Admin User",
-    "country": "US",
-    "session": "uuid-session-token",
+    "session": "",
     "admin": true
-  },
-  {
-    "username": "alfredredbird",
-    "password": "12345",
-    "email": "alfred@mail.co",
-    "name": "alfred",
-    "country": "US",
-    "id": 2,
-    "session": "8904ebf8-461d-46ac-a8f1-d4fcf9fb48af",
-    "admin": true
-  },
-  {
-    "username": "bob",
-    "password": "bob",
-    "email": "bob@bob.bob",
-    "name": "bob",
-    "country": "US",
-    "id": 3,
-    "session": "dfe1823a-308c-4f38-9f6d-d8d1ada948e4"
   }
 ]
