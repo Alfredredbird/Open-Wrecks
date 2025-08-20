@@ -102,3 +102,14 @@ You’re free to use, modify, and distribute it — just give credit.
 📽️ YouTube: [@alfredredbird](https://youtube.com/@alfredredbird)
 
 📖 Docs: (Coming soon)
+
+### 📘 Contact
+
+- Twitter: https://twitter.com/alfredredbird1
+- Reddit: https://www.reddit.com/user/Alfredredbird/
+
+# 🛠 Other Tools
+
+Other tools in the fleet:
+- Bibi-Bird (beta): https://github.com/alfredredbird/Bibi-Bird
+- Tookie-OSINT: https://github.com/afredredbird/tookie-osint
