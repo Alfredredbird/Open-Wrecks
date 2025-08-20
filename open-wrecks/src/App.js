@@ -73,6 +73,7 @@ function App() {
   const [measureMode, setMeasureMode] = useState(false);
   const [selectedMarkers, setSelectedMarkers] = useState([]);
   const [mapStyle, setMapStyle] = useState("osm"); // default
+  // maps
  const mapStyles = {
   osm: {
     name: "OpenStreetMap",
