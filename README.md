@@ -19,6 +19,7 @@ It lets you record, manage, and visualize shipwrecks on an interactive map ~ wit
 - ⚛️ **Modern Stack** – Built with **React** frontend + **Flask (Python)** backend.
 - 🗾 **Updated Info** – Comes with **7 Map styles**, **12 ship recycling yards** and **tons** of ships.
 - 💾 **Self-Hosted** – All data is stored locally, under *your* control.
+- 🔍 **View On Google Maps** – All ships have the option to view the location on Google Maps.
 - 🛠️ **Constant Updates** – I plan to update this project as much as possible.
 
 ---
