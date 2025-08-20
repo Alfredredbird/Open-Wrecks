@@ -119,5 +119,56 @@
       "https://en.m.wikipedia.org/wiki/YOG%E2%80%9342"
     ],
     "submitted_by": "alfredredbird"
+  },
+  {
+    "id": 8,
+    "title": "Maria Bianca Guidesman",
+    "lat": 11.990863925611507,
+    "lng": -68.63978907600449,
+    "imo": 6421866,
+    "description": "# Maria Bianca\n\n## Info\nThe Maria Bianca crashed on the island of Klein Cura\u00e7ao. The ship was built in 1964 by Drypool Engineering. \n\n## Former Names\n -  Vasiliki Iv \n -  Guidesman \n\n## Build Year\n- 1964\n\n## Type\n- Oil Tanker\n\n## Specifications\n- Length: 62 m\n\n- Beam: 9.4 m\n\n- Draught: 3.9 m\n\n- DWT: 1191 tons",
+    "images": [
+      "https://i.ytimg.com/vi/RqtQ7AJTWQw/maxresdefault.jpg",
+      "https://i.dailymail.co.uk/1s/2020/04/29/10/27745076-8265613-image-a-9_1588152767571.jpg",
+      "https://kleincuracaotrips.com/wp-content/uploads/2023/03/Maria-Bianca-Guidsman-Wrak.jpg"
+    ],
+    "links": [
+      "https://abandonedin360.com/abandoned-vehicles/maria-bianca-guidesman-shipwreck/",
+      "https://www.youtube.com/watch?v=RqtQ7AJTWQw",
+      "https://www.dailymail.co.uk/travel/escape/article-8265613/Klein-Curacao-rogue-ghost-island-Caribbean-paradise.html",
+      "https://www.shipspotting.com/photos/2431152?navList=moreOfThisShip&imo=6421866&lid=1800942"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 9,
+    "title": "Comercial Boat",
+    "lat": 11.992027490113419,
+    "lng": -68.64017936576775,
+    "imo": 0,
+    "description": "Not much is known yet. Crashed near Bianca Maria",
+    "images": [
+      "https://i.dailymail.co.uk/1s/2020/04/29/10/27745084-8265613-image-a-8_1588152762231.jpg"
+    ],
+    "links": [
+      "https://www.dailymail.co.uk/travel/escape/article-8265613/Klein-Curacao-rogue-ghost-island-Caribbean-paradise.html"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 10,
+    "title": "GREAT BEAR",
+    "lat": 60.4,
+    "lng": -172.7,
+    "imo": 0,
+    "description": "Not much is known. Crashed within 7 miles of here.",
+    "images": [
+      "https://preview.redd.it/the-great-bear-alaska-v0-hr98xj9dvlcf1.jpeg?width=640&crop=smart&auto=webp&s=09865ae22b3655feb6bf6f7df90a7979047497b0"
+    ],
+    "links": [
+      "https://alaskashipwreck.com/shipwrecks-by-area/west-central-alaska-shipwrecks-2/west-central-alaska-shipwrecks-g/",
+      "https://www.reddit.com/r/Shipwrecks/comments/1lyo5z7/the_great_bear_alaska/"
+    ],
+    "submitted_by": "explorer"
   }
 ]
