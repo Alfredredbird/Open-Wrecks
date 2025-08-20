@@ -237,3 +237,11 @@
 .map-link:hover {
   color: #FF4500; 
 }
+.ship-counter {
+  margin-left: 20px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: white;
+}

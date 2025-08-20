@@ -170,5 +170,41 @@
       "https://www.reddit.com/r/Shipwrecks/comments/1lyo5z7/the_great_bear_alaska/"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 11,
+    "title": "SS Raffaello",
+    "lat": 29.000622,
+    "lng": 50.846075,
+    "imo": 5289106,
+    "description": "# SS Raffaello\n\n### Real Location Not Known!\n\n## Info\n\n- Built: 1965\n\n- IMO: 5289106\n\n- Type: Ocean Liner\n\n- Length:  275.5 m \n\n- Beam:    30.20 m \n\n- Draught: 10.40 m \n\n- Fate: Partially sunk\n\n- Capacity: 1775 passengers\n\n- Crew: 720\n\n- Fate: Later sunk in Iran do to being hit by a missil in the Iran-Iraq war.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SS_Raffaello_%2833491820471%29.jpg/330px-SS_Raffaello_%2833491820471%29.jpg",
+      "https://gammadivers.ir/wp-content/uploads/2016/12/Raffaello-a_Genova_con_MichG.Belf_-534x400.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Raffaello",
+      "https://gammadivers.ir/ss-raffaello-wreck/"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 12,
+    "title": "MV Plassy",
+    "lat": 53.055735215389625,
+    "lng": -9.503768499504783,
+    "imo": 0,
+    "description": "# MV Plassy (MV Peterjon)\n\n## Bio\n\nThe MV **Plassy** (or *Plassey*) began life as **HMS Juliet**, a Royal Navy trawler built in 1940 for World War II service, including participation in Operation Torch in 1942. After the war, it was converted to a cargo vessel, renamed *Peterjon* in 1947, and later acquired by the Limerick Steamship Company in 1951, becoming *Plassy*. On **8 March 1960**, while carrying whiskey, stained glass, and yarn through Galway Bay, it was wrecked in a storm off Inisheer, Aran Islands. All crew were rescued by the Inisheer Rocket Crew using a breeches buoy. A later storm washed the vessel ashore, where its wreck still lies.\n\n\n## Specifications\n\n- Fate: Wrecked in 1960\n\n- Builder: Welton & Gemmell\n\n- Displacement: 545 tons\n\n- Length: 164.0 ft\n\n- Beam: 27.8 ft \n\n- Draught: 11.0 ft ",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/On_the_Rocks%2C_Inisheer%2C_Aran_Islands_-2-_-_geograph.org.uk_-_637547.jpg/330px-On_the_Rocks%2C_Inisheer%2C_Aran_Islands_-2-_-_geograph.org.uk_-_637547.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Plassy_shipwreck_2016.jpg/330px-Plassy_shipwreck_2016.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Shipwreck_of_MV_Plassy_on_Inisheer_01.jpg/330px-Shipwreck_of_MV_Plassy_on_Inisheer_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Shipwreck_of_MV_Plassy_on_Inisheer_04.jpg/330px-Shipwreck_of_MV_Plassy_on_Inisheer_04.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Wreck_of_the_%27Plassy%27._Inisheer_-_geograph.org.uk_-_289299.jpg/250px-Wreck_of_the_%27Plassy%27._Inisheer_-_geograph.org.uk_-_289299.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/MV_Plassy"
+    ],
+    "submitted_by": "explorer"
   }
 ]

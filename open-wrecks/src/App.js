@@ -325,6 +325,7 @@ const handleContactSupport = () => {
       {/* Topbar */}
       <div className="topbar">
         <h1>Open-Wrecks</h1>
+         <span className="ship-counter">Logged Ships: {ships.length}</span>
         <input
           type="text"
           placeholder="Search ships..."
