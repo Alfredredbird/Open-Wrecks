@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie"; // <--- import
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import Cookies from "js-cookie";
+import { MapContainer, TileLayer, Marker, Popup, useMap, Tooltip, Polyline } from "react-leaflet";
 import ReactMarkdown from "react-markdown";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
@@ -12,7 +12,7 @@ function FlyToPosition({ position, zoom }) {
   if (position) map.flyTo(position, zoom, { duration: 1.5 });
   return null;
 }
-
+const API_BASE = `${window.location.protocol}//${window.location.hostname}:5000`;
 function ImageCarousel({ images }) {
   const [current, setCurrent] = useState(0);
 
@@ -21,6 +21,7 @@ function ImageCarousel({ images }) {
 
   const next = () => setCurrent((prev) => (prev + 1) % images.length);
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  
 
   return (
     <div className="carousel">
@@ -34,6 +35,30 @@ function ImageCarousel({ images }) {
   );
 }
 
+function getDistance(coord1, coord2) {
+  const R = 6371; // km
+  const dLat = (coord2[0] - coord1[0]) * Math.PI / 180;
+  const dLon = (coord2[1] - coord1[1]) * Math.PI / 180;
+  const lat1 = coord1[0] * Math.PI / 180;
+  const lat2 = coord2[0] * Math.PI / 180;
+
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.sin(dLon / 2) * Math.sin(dLon / 2) *
+    Math.cos(lat1) * Math.cos(lat2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
+function getTotalDistance(coords) {
+  let total = 0;
+  for (let i = 1; i < coords.length; i++) {
+    total += getDistance(coords[i - 1], coords[i]);
+  }
+  return total;
+}
+
+
 
 function App() {
   const [ships, setShips] = useState([]);
@@ -45,6 +70,9 @@ function App() {
   const [showPorts, setShowPorts] = useState(false);
   const [showCoordinates, setShowCoordinates] = useState(false);
   const [showMarkers, setShowMarkers] = useState(true);
+  const [measureMode, setMeasureMode] = useState(false);
+  const [selectedMarkers, setSelectedMarkers] = useState([]);
+
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
@@ -93,7 +121,7 @@ function App() {
   // Fetch ports whenever showPorts is toggled on
   useEffect(() => {
   if (showPorts) {
-    fetch("http://127.0.0.1:5000/api/yards")
+    fetch(`${API_BASE}/api/yards`)
       .then(res => res.json())
       .then(data => setPorts(data))
       .catch(err => console.error("Failed to fetch junk yards:", err));
@@ -103,7 +131,7 @@ function App() {
 }, [showPorts]);
   // Fetch ships
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/ships")
+    fetch(`${API_BASE}/api/ships`)
       .then((res) => res.json())
       .then((data) => setShips(data))
       .catch((err) => console.error("Failed to fetch ships:", err));
@@ -121,8 +149,9 @@ function App() {
     if (session) validateSession(session);
   }, []);
 
+  
   const validateSession = (session) => {
-    fetch("http://127.0.0.1:5000/api/account", {
+    fetch(`${API_BASE}/api/account`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ session }),
@@ -144,7 +173,7 @@ function App() {
   if (!session) return setMessage("No session found.");
 
   if (window.confirm("Are you sure you want to delete your account? This cannot be undone.")) {
-    fetch(`http://127.0.0.1:5000/api/delete_account`, {
+    fetch(`${API_BASE}/api/delete_account`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ session })
@@ -159,7 +188,7 @@ function App() {
 };
 
 const fetchPending = () => {
-    fetch("http://127.0.0.1:5000/api/pending")
+    fetch(`${API_BASE}/api/pending`)
       .then(res => res.json())
       .then(data => setPendingShips(data))
       .catch(err => console.error("Failed to fetch pending:", err));
@@ -186,7 +215,7 @@ const handleContactSupport = () => {
     links: submitData.links.split(",").map(l => l.trim())
   };
 
-  fetch("http://127.0.0.1:5000/api/pending", {
+  fetch(`${API_BASE}/api/pending`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -216,7 +245,7 @@ const handleContactSupport = () => {
 
 
   const handleLogin = () => {
-    fetch("http://127.0.0.1:5000/api/login", {
+    fetch(`${API_BASE}/api/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loginData),
@@ -233,7 +262,7 @@ const handleContactSupport = () => {
   };
 
   const handleSignup = () => {
-    fetch("http://127.0.0.1:5000/api/signup", {
+    fetch(`${API_BASE}/api/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(signupData),
@@ -328,7 +357,16 @@ const handleContactSupport = () => {
             {flyPosition && <FlyToPosition position={flyPosition} zoom={6} />}
             {showMarkers &&
   ships.map((ship) => (
-    <Marker key={ship.id} position={[ship.lat, ship.lng]} icon={boatIcon}>
+    <Marker key={ship.id} position={[ship.lat, ship.lng]} icon={boatIcon}eventHandlers={{
+  click: () => {
+    if (measureMode) {
+      setSelectedMarkers([...selectedMarkers, [ship.lat, ship.lng]]);
+    } else {
+      handleShipClick(ship);
+    }
+  }
+}}
+>
       <Popup>
         <h3>{ship.title}</h3>
         {ship.images && ship.images.length > 0 && <ImageCarousel images={ship.images} />}
@@ -354,7 +392,11 @@ const handleContactSupport = () => {
     </a>
   </div>
 </div>
-
+ {showCoordinates && (
+        <Tooltip permanent direction="bottom" offset={[0, 20]} interactive={false}>
+          <span>{ship.lat}, {ship.lng}</span>
+        </Tooltip>
+      )}
       </Popup>
     </Marker>
   ))
@@ -364,6 +406,17 @@ const handleContactSupport = () => {
     key={`port-${port.id}`}
     position={[port.lat, port.lng]}
     icon={junkyardIcon}
+    // WONT WORK WITH PORTS YET
+//     eventHandlers={{
+//   click: () => {
+//     if (measureMode) {
+//       setSelectedMarkers([...selectedMarkers, [port.lat, [port].lng]]);
+//     } else {
+//       handleShipClick(port);
+//     }
+//   }
+// }}
+
   >
     <Popup>
       <h3>{port.name}</h3>
@@ -390,10 +443,63 @@ const handleContactSupport = () => {
     </a>
   </div>
 </div>
-
+     {showCoordinates && (
+        <Tooltip permanent direction="bottom" offset={[0, 20]} interactive={false}>
+          <span>{port.lat}, {port.lng}</span>
+        </Tooltip>
+      )}
     </Popup>
   </Marker>
 ))}
+{selectedMarkers.length >= 2 && (
+  <>
+    {/* Draw the main polyline */}
+    <Polyline positions={selectedMarkers} color="red" />
+
+    {/* Draw a tiny Polyline for each segment just to attach Tooltip */}
+    {selectedMarkers.map((coord, i) => {
+      if (i === 0) return null;
+
+      const lat1 = selectedMarkers[i - 1][0];
+      const lng1 = selectedMarkers[i - 1][1];
+      const lat2 = coord[0];
+      const lng2 = coord[1];
+
+      const dist = getDistance([lat1, lng1], [lat2, lng2]).toFixed(2);
+
+      // midpoint
+      const midLat = (lat1 + lat2) / 2;
+      const midLng = (lng1 + lng2) / 2;
+
+      return (
+        <Polyline
+          key={i}
+          positions={[[lat1, lng1], [lat2, lng2]]}
+          color="transparent"
+        >
+          <Tooltip
+            permanent
+            direction="center"
+            offset={[0, 0]}
+            interactive={false}
+            opacity={1}
+            sticky={false}
+            className="distance-tooltip"
+          >
+            <span>{dist} km</span>
+          </Tooltip>
+        </Polyline>
+      );
+    })}
+
+    {/* Optional: total distance at last point */}
+    <Marker position={selectedMarkers[selectedMarkers.length - 1]}>
+      <Tooltip permanent direction="bottom" offset={[0, 20]}>
+        <span>Total: {getTotalDistance(selectedMarkers).toFixed(2)} km</span>
+      </Tooltip>
+    </Marker>
+  </>
+)}
 
           </MapContainer>
           {account && (
@@ -432,6 +538,20 @@ const handleContactSupport = () => {
     <button onClick={() => setShowMarkers(!showMarkers)}>
       {showMarkers ? "Hide Markers" : "Show Markers"}
     </button>
+     <button onClick={() => {
+      setMeasureMode(!measureMode);
+      setSelectedMarkers([]); 
+    }}>
+      {measureMode ? "Disable Measure" : "Enable Measure"}
+    </button>
+
+    {/* Clear Measurements button */}
+    {measureMode && (
+      <button onClick={() => setSelectedMarkers([])}>
+        Clear Measurements
+      </button>
+    )}
+
   </div>
 )}
   </div>
@@ -477,7 +597,7 @@ const handleContactSupport = () => {
         style={{ background: "green", color: "white", marginRight: "10px" }}
         onClick={async () => {
   const session = Cookies.get("session"); 
-  await fetch(`http://127.0.0.1:5000/api/approve/${ship.id}`, {
+  await fetch(`${API_BASE}/api/approve/${ship.id}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ session }),
@@ -492,7 +612,7 @@ const handleContactSupport = () => {
         style={{ background: "darkred", color: "white" }}
         onClick={async () => {
   const session = Cookies.get("session"); 
-  await fetch(`http://127.0.0.1:5000/api/reject/${ship.id}`, {
+  await fetch(`${API_BASE}/api/reject/${ship.id}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ session }),
