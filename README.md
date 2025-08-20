@@ -50,7 +50,7 @@ npm start
 ```
 Runs on: http://127.0.0.1:3000 or local IP
 
-### 📂 Project Structure
+## 📂 Project Structure
 For those who are wondering!
 
 ```
@@ -66,7 +66,7 @@ Open-Wrecks/
 └── README.md
 ```
 
-### 🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 
@@ -90,12 +90,12 @@ Contributions are welcome!
 
 
 
-### 📜 License
+## 📜 License
 
 Open-Wrecks is licensed under the MIT License.
 You’re free to use, modify, and distribute it — just give credit.
 
-### 🌐 Links
+## 🌐 Links
 
 🐙 GitHub: [Open-Wrecks](https://github.com/alfredredbird/Open-Wrecks)
 
@@ -103,12 +103,12 @@ You’re free to use, modify, and distribute it — just give credit.
 
 📖 Docs: (Coming soon)
 
-### 📘 Contact
+## 📘 Contact
 
 - Twitter: https://twitter.com/alfredredbird1
 - Reddit: https://www.reddit.com/user/Alfredredbird/
 
-# 🛠 Other Tools
+## 🛠 Other Tools
 
 Other tools in the fleet:
 - Bibi-Bird (beta): https://github.com/alfredredbird/Bibi-Bird
