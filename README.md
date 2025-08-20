@@ -52,11 +52,11 @@ Runs on: http://127.0.0.1:3000 or local IP
 
 ### 4. Logging In
 
----
+
  Default admin login credentials 
  User: `explorer`
  Password: `DeepSea` 
----
+
 
 ## 📂 Project Structure
 For those who are wondering!
