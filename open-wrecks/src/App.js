@@ -72,6 +72,24 @@ function App() {
   const [showMarkers, setShowMarkers] = useState(true);
   const [measureMode, setMeasureMode] = useState(false);
   const [selectedMarkers, setSelectedMarkers] = useState([]);
+  const [mapStyle, setMapStyle] = useState("osm"); // default
+  const mapStyles = {
+  osm: {
+    name: "OpenStreetMap",
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  },
+  cartoLight: {
+    name: "Carto Light",
+    url: "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+  },
+  cartoDark: {
+    name: "Carto Dark",
+    url: "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+  }
+};
 
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
@@ -350,10 +368,11 @@ const handleContactSupport = () => {
             minZoom={2}
             style={{ height: "100%", width: "100%" }}
           >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
+           <TileLayer
+  url={mapStyles[mapStyle].url}
+  attribution={mapStyles[mapStyle].attribution}
+/>
+
             {flyPosition && <FlyToPosition position={flyPosition} zoom={6} />}
             {showMarkers &&
   ships.map((ship) => (
@@ -535,6 +554,7 @@ const handleContactSupport = () => {
     <button onClick={() => setShowCoordinates(!showCoordinates)}>
       {showCoordinates ? "Hide Coordinates" : "Show Coordinates"}
     </button>
+    
     <button onClick={() => setShowMarkers(!showMarkers)}>
       {showMarkers ? "Hide Markers" : "Show Markers"}
     </button>
@@ -551,6 +571,12 @@ const handleContactSupport = () => {
         Clear Measurements
       </button>
     )}
+  <h4>Map Style</h4>
+<select value={mapStyle} onChange={(e) => setMapStyle(e.target.value)}>
+  {Object.keys(mapStyles).map((key) => (
+    <option key={key} value={key}>{mapStyles[key].name}</option>
+  ))}
+</select>
 
   </div>
 )}
