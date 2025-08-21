@@ -890,5 +890,191 @@
       "https://en.wikipedia.org/wiki/USS_Arizona"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 57,
+    "title": "Advance",
+    "lat": 34.0,
+    "lng": 151.235,
+    "imo": 0,
+    "description": "# Advance (1874)\n\n**Type:** Composite schooner  \n**Tonnage:** 59 GRT, 51 NRT  \n**Length:** 21.94 m  \n**Beam:** 5.943 m  \n**Depth:** 1.950 m  \n**Crew:** 4  \n**Built:** 1874, Tolaga Bay, Auckland, New Zealand by John Thompson  \n**Owner:** Captain Charles Ingstrom  \n**Port of Registry:** Sydney  \n**Fate:** Wrecked 12 June 1902, Henrys Head, Botany Bay, NSW, Australia  \n\n## History\n\nThe **Advance** was a wooden composite schooner launched in 1874. She initially traded between East Coast ports of New Zealand, carrying passengers and cargo such as coal, timber, and flour. Later, she operated in Australia, primarily in the coastal coal trade between Sydney and Northern and Southern collieries.\n\n### Notable Events\n\n- **1879:** Crew members sentenced to 24 hours imprisonment for disobedience.  \n- **1880:** Ran aground at North Spit, Christchurch; no major damage.  \n- **1881:** Lost control near Greymouth; recovered without serious damage.  \n\n#### Australia\n\n- **1897 \u2013 Lady Robinsons Beach stranding:** Driven onto the beach by a squall; vessel sold and repurchased by the former owner.  \n- **1898 \u2013 Rescue of Captain Gallant:** The Advance rescued the sole survivor of the brig *Minora* after a 24-hour ordeal at sea. Crew members received awards for their actions.\n\n## Wreck\n\nOn **12 June 1902**, while in ballast from Wollongong to Newcastle, the Advance was struck by heavy seas off Henrys Head. The vessel was thrown onto rocks repeatedly. Captain Ingstrom was killed; the remaining crew survived. The schooner was uninsured and valued at \u00a3300.  \n\n### Wreck Site\n\nThe wreck occurred at Henrys Head, a rocky headland with high cliffs. Remaining wreckage included masts, planking, rigging, sails, and part of the deckhouse scattered along nearby beaches.\n\n## References\n\n- The Sydney Morning Herald (1902)  \n- Daily Southern Cross (1874\u20131875)  \n- Poverty Bay Herald (1879\u20131899)  \n- Grey River Argus (1881)  \n\n*Categories: Shipwrecks of Southern Sydney Region, Ships built in New Zealand, Schooners of Australia, Maritime incidents 1880\u20131902*\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Advance_(1874)"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 58,
+    "title": "Advance",
+    "lat": 33.1806,
+    "lng": 151.70328,
+    "imo": 0,
+    "description": "# Advance (1884)\n\n**Type:** Iron screw steamer tug  \n**Tonnage:** 181 GRT, 12 NRT  \n**Length:** 36.57 m  \n**Beam:** 6.400 m  \n**Draught:** 3.962 m  \n**Installed Power:** Compound  \n**Crew:** 8  \n**Built:** 1884, Williamstown, Victoria, Australia (Builder unknown)  \n**Owner:** Messrs Fenwick Brothers, Sydney  \n**Port of Registry:** Sydney  \n**Fate:** Wrecked 25 December 1908, off Catherine Hill Bay, NSW, Australia  \n\n## History\n\nThe **Advance** was a tug primarily used for harbor services.  \n\n### Notable Incidents\n\n- **1906 \u2013 Collision with Tuncurry:**  \n  On 30 September 1906, the Advance collided with the Tuncurry near North Head, Sydney, due to poor visibility. The Tuncurry sustained damage but was not in danger of sinking. The incident was reviewed by the Marine Court; a deckhand was in charge at the time, and no negligence was found.  \n\n### Wreck\n\nOn **25 December 1908**, under Captain Alick Mckenzie, the Advance collided with the Inverna in foggy conditions off Catherine Hill Bay, NSW, and sank.\n\n## References\n\n- \"Tug and Steamer in Collision\", *The Adelaide*, 1 October 1906  \n- \"A Maritime Mishap\", *The Adelaide*, 13 October 1906  \n\n*Categories: Shipwrecks of the Central Coast Region, Ships built in Victoria, 1884 ships, Maritime incidents 1906\u20131908, Tugboats of Australia, Iron and steel steamships of Australia*\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Advance_(1884)"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 59,
+    "title": "Agnes (1853)",
+    "lat": 32.8,
+    "lng": 152.0,
+    "imo": 0,
+    "description": "# Agnes (1853)\n\n**Type:** Wooden carvel cutter  \n**Tonnage:** 13 GT, 13 NT  \n**Length:** 11.97 m  \n**Beam:** 3.169 m  \n**Draught:** 1.432 m  \n**Built:** 1853, Sydney Harbour, New South Wales, Australia by James Bevan  \n**Owner:** Henry Hardy  \n**Port of Registry:** Sydney  \n**Fate:** Wrecked 13 July 1860, Newcastle Bight, NSW, Australia  \n\n## History\n\nThe **Agnes** was a small wooden cutter built in Sydney Harbour in 1853. She was used for coastal trade between Newcastle and Sydney.\n\n### Wreck\n\nOn **13 July 1860**, the Agnes was blown ashore during a gale at Newcastle Bight and lost. The ship master was Henry Hardy.\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Agnes_(1853)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1853",
+    "owner": "Henry Hardy",
+    "port_of_registry": "Sydney",
+    "type": "Wood carvel cutter",
+    "tonnage": "13 GT",
+    "draught": "1.432",
+    "length": "11.97",
+    "beam": "3.169",
+    "capacity": "",
+    "crew": "",
+    "builder": "James Bevan"
+  },
+  {
+    "id": 60,
+    "title": "Agnes (1875)",
+    "lat": 35.12,
+    "lng": 150.82,
+    "imo": 0,
+    "description": "# Agnes (1875)\n\n**Type:** Wooden carvel schooner  \n**Tonnage:** 80 GRT, 80 NRT  \n**Length:** 23.62 m  \n**Beam:** 6.156 m  \n**Draught:** 1.981 m  \n**Crew:** 6  \n**Built:** 1875, Brisbane Water, New South Wales, Australia by Edward Davis  \n**Owner:** Alex Kethel  \n**Port of Registry:** Newcastle, New South Wales  \n**Fate:** Wrecked 12 March 1890, north of Brunswick River heads, NSW, Australia  \n\n## History\n\nThe **Agnes** was a wooden schooner built in 1875, used for coastal trade along New South Wales.  \n\n### Wreck\n\nOn **12 March 1890**, while in ballast between Sydney and Tweed River, the Agnes lost her sails in a gale and was wrecked north of Brunswick River heads. Eight people died in the incident.\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Agnes_(1875)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1875",
+    "owner": "Alex Kethel",
+    "port_of_registry": "Newcastle",
+    "type": "Wood carvel schooner",
+    "tonnage": "80 GRT",
+    "draught": "1.981",
+    "length": "23.62",
+    "beam": "6.156",
+    "capacity": "",
+    "crew": "6",
+    "builder": "Edward Davis"
+  },
+  {
+    "id": 61,
+    "title": "Agnes (1877)",
+    "lat": 35.12,
+    "lng": 150.82,
+    "imo": 0,
+    "description": "# Agnes (1877)\n\n**Type:** Wooden carvel ketch  \n**Tonnage:** 38 GRT, 38 NRT  \n**Length:** 22.95 m  \n**Beam:** 4.328 m  \n**Draught:** 1.798 m  \n**Built:** 1877, Williams River, Eagleton, New South Wales, Australia by William McPherson  \n**Owners:** Benjamin Lloyd, Ed Davies, William Grisdale  \n**Port of Registry:** Newcastle, New South Wales  \n**Fate:** Wrecked 1883, off Jervis Bay, NSW, Australia  \n\n## History\n\nThe **Agnes** was a wooden ketch used for coastal trade along New South Wales. She was lost when she foundered off Jervis Bay in 1883.\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Agnes_(1877)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1877",
+    "owner": "Benjamin Lloyd",
+    "port_of_registry": "Newcastle",
+    "type": "Wood carvel ketch",
+    "tonnage": "38 GRT",
+    "draught": "1.798",
+    "length": "22.95",
+    "beam": "4.328",
+    "capacity": "",
+    "crew": "",
+    "builder": "William Mc Pherson"
+  },
+  {
+    "id": 62,
+    "title": "Agnes (1904)",
+    "lat": 33.85,
+    "lng": 151.24,
+    "imo": 0,
+    "description": "# Manly\u2013Agnes Collision (1904)\n\n**Location:** Sydney Harbour, Australia  \n**Coordinates:** 33.85\u00b0S 151.24\u00b0E  \n\n## Agnes\n\n- **Type:** 30' launch  \n- **Owner:** Frederick Thomas Heming  \n- **Built:** 1904 by W. Holmes, North Sydney, NSW  \n- **Engine:** 5 hp (3.7 kW) Hercules engine  \n- **Passengers:** Heming family (6 people)  \n\n## The Collision\n\nThe Agnes was struck near the stern by the larger passenger ferry **SS Manly** while carrying the Heming family between Snails Bay and Middle Harbour. Mr. Heming and his wife Agnes drowned; their four children were rescued.\n\n## Aftermath\n\n- Captain Ward of the Manly was charged with manslaughter but found **not guilty**.  \n- Blame was placed on Hemings for turning into the path of the ferry.  \n- Captain Ward was admonished for not sounding the ferry's whistle.  \n- A fund was established to help the oldest Hemings child buy out the parents\u2019 laundry business, as the children were orphaned.\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Manly%E2%80%93Agnes_collision"
+    ],
+    "submitted_by": "explorer",
+    "date": "1904",
+    "owner": "rederick Thomas Heming",
+    "port_of_registry": "",
+    "type": "passenger ferry",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
+  },
+  {
+    "id": 63,
+    "title": "Agnes Irving",
+    "lat": 30.80635,
+    "lng": 153.005007,
+    "imo": 0,
+    "description": "# Agnes Irving (1862)\n\n**Type:** Iron paddle steamer  \n**Tonnage:** 431 GRT, 333 NRT  \n**Length:** 62.02 m  \n**Beam:** 7.467 m  \n**Draught:** 3.566 m  \n**Built:** 1862, Deptford Green, United Kingdom by Charles Lungley Kent  \n**Owner:** Clarence and Richmond River Steam Navigation Company  \n**Port of Registry:** Sydney  \n**Engine:** Oscillating steam engine  \n**Fate:** Wrecked 28 December 1879, South Spit of the old entrance of Trial Bay, NSW, Australia  \n\n## History\n\nThe **Agnes Irving** was an iron paddle steamer used for coastal cargo services along New South Wales. She was lost while entering the Macleay River on an ebb tide carrying general cargo from Sydney.\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Agnes_Irving"
+    ],
+    "submitted_by": "explorer",
+    "date": "1862",
+    "owner": "Clarence and Richmond River Steam Navigation Company",
+    "port_of_registry": "Sydney",
+    "type": "Iron paddle steamer",
+    "tonnage": "431 GRT",
+    "draught": "3.566",
+    "length": "62.02",
+    "beam": "7.467",
+    "capacity": "",
+    "crew": "",
+    "builder": "Charles Lungley"
+  },
+  {
+    "id": 64,
+    "title": "Alhambra",
+    "lat": -32.8833,
+    "lng": 151.9,
+    "imo": 0,
+    "description": "# Alhambra (1855)\n\n**Type:** Iron steamer screw  \n**Tonnage:** 766 GRT, 497 NRT  \n**Length:** 63.8 m  \n**Beam:** 8.3 m  \n**Draught:** 5.0 m  \n**Built:** 1855, Cubitt Town, London by Samuda Brothers  \n**Owners:**  \n- Peninsular and Oriental Steam Navigation Company (1855\u20131862)  \n- Melbourne registry (1862\u20131882)  \n- Sydney registry (1882\u20131888)  \n**Engine:** Geared steam engine, 140 hp  \n**Speed:** 10 knots  \n**Fate:** Sank 30 June 1888 in a collision off Newcastle, NSW, Australia  \n\n## History\n\nThe **Alhambra** was initially named *Cintra*, later *Braganza*, and finally renamed before launch in 1855. She served routes between the UK, Melbourne, New Zealand, Mauritius, and Sydney. The ship experienced multiple mechanical failures, collisions, and accidents during her career.\n\n### Service Highlights\n- Maiden voyage: 7 July 1855 to Marseille  \n- 1857: Machinery failure off the Portuguese coast; repaired in Blackwall  \n- 1862: Sold to McMechan Blackwood and Co.; pioneer Melbourne-New Zealand route  \n- 1868\u20131869: Engine and screw shaft failures; required multiple tows and repairs  \n- 1885: Collided with Newcastle lightship and outward-bound steamer *Balmain*; crew mostly unharmed  \n\n### Loss\nOn 30 June 1888, while assisting to remove a derelict northeast of Newcastle, the **Alhambra** fouled the derelict, sustaining a large hole. Despite attempts to stop the leak, the ship sank a few minutes later. The crew escaped safely.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Alhambra_%281853%29.jpg/330px-Alhambra_%281853%29.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Alhambra_(1855)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1885",
+    "owner": "Peninsular and Oriental Steam Navigation Company",
+    "port_of_registry": "London",
+    "type": "Iron steamer screw",
+    "tonnage": "766 GRT",
+    "draught": "5.0",
+    "length": "63.8",
+    "beam": "8.3",
+    "capacity": "",
+    "crew": "",
+    "builder": "Samuda Brothers"
   }
 ]

@@ -135,6 +135,17 @@ function App() {
   lat: "",
   lng: "",
   imo: "",
+  date: "",
+  owner: "",
+  port_of_registry: "",
+  type: "",
+  tonnage: "",
+  draught: "",
+  length: "",
+  beam: "",
+  capacity: "",
+  crew: "",
+  builder: "",
   description: "",
   images: "",
   links: ""
@@ -747,6 +758,7 @@ const handleContactSupport = () => {
 {showSubmit && (
   <div className="overlay-widget">
     <h2>Submit Shipwreck</h2>
+    
     <input
       type="text"
       placeholder="Title"
@@ -771,6 +783,73 @@ const handleContactSupport = () => {
       value={submitData.imo}
       onChange={(e) => setSubmitData({...submitData, imo: e.target.value})}
     />
+    <input
+      type="text"
+      placeholder="Date"
+      value={submitData.date}
+      onChange={(e) => setSubmitData({...submitData, date: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Owner"
+      value={submitData.owner}
+      onChange={(e) => setSubmitData({...submitData, owner: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Port of Registry"
+      value={submitData.port_of_registry}
+      onChange={(e) => setSubmitData({...submitData, port_of_registry: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Type"
+      value={submitData.type}
+      onChange={(e) => setSubmitData({...submitData, type: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Tonnage"
+      value={submitData.tonnage}
+      onChange={(e) => setSubmitData({...submitData, tonnage: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Draught"
+      value={submitData.draught}
+      onChange={(e) => setSubmitData({...submitData, draught: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Length"
+      value={submitData.length}
+      onChange={(e) => setSubmitData({...submitData, length: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Beam"
+      value={submitData.beam}
+      onChange={(e) => setSubmitData({...submitData, beam: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Capacity"
+      value={submitData.capacity}
+      onChange={(e) => setSubmitData({...submitData, capacity: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Crew"
+      value={submitData.crew}
+      onChange={(e) => setSubmitData({...submitData, crew: e.target.value})}
+    />
+    <input
+      type="text"
+      placeholder="Builder"
+      value={submitData.builder}
+      onChange={(e) => setSubmitData({...submitData, builder: e.target.value})}
+    />
+
     <textarea
       placeholder="Description (Markdown)"
       value={submitData.description}
@@ -788,11 +867,15 @@ const handleContactSupport = () => {
       value={submitData.links}
       onChange={(e) => setSubmitData({...submitData, links: e.target.value})}
     />
+    
     <button onClick={handleSubmitShip}>Submit</button>
     <button onClick={() => setShowSubmit(false)}>Close</button>
     {message && <p>{message}</p>}
   </div>
 )}
+
+
+
 
       {/* Signup Widget */}
       {showSignup && !account && (

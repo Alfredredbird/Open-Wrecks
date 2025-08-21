@@ -294,7 +294,7 @@ def submit_shipwreck():
         coord_input = data.get("lat", 0)
         lng_input = data.get("lng", 0)
 
-        # If user submitted as DMS string instead of decimal, convert it
+        # Convert DMS string to decimal if necessary
         if isinstance(coord_input, str) and any(c in coord_input for c in "°'\""):
             try:
                 lat, lng = dms_to_decimal(coord_input)
@@ -304,18 +304,30 @@ def submit_shipwreck():
             lat = float(coord_input)
             lng = float(lng_input)
 
-        new_ship = {
-        "id": new_id,
-        "title": data.get("title", ""),
-        "lat": lat,
-        "lng": lng,
-        "imo": int(data.get("imo")),
-        "description": data.get("description", ""),
-        "images": data.get("images", []),
-        "links": data.get("links", []),
-        "submitted_by": user["username"]
-    }
 
+        new_ship = {
+            "id": new_id,
+            "title": data.get("title", ""),
+            "lat": lat,
+            "lng": lng,
+            "imo": int(data.get("imo", 0)),
+            "description": data.get("description", ""),
+            "images": data.get("images", []),
+            "links": data.get("links", []),
+            "submitted_by": user["username"],
+            # Ship details
+            "date": data.get("date", "unknown"),
+            "owner": data.get("owner", "unknown"),
+            "port_of_registry": data.get("port_of_registry", "unknown"),
+            "type": data.get("type", "unknown"),
+            "tonnage": data.get("tonnage", "unknown"),
+            "draught": data.get("draught", "unknown"),
+            "length": data.get("length", "unknown"),
+            "beam": data.get("beam", "unknown"),
+            "capacity": data.get("capacity", "unknown"),
+            "crew": data.get("crew", "unknown"),
+            "builder": data.get("builder", "unknown")
+        }
 
         pending_data.append(new_ship)
 
@@ -326,6 +338,7 @@ def submit_shipwreck():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route('/api/ships')
 def get_ships():
