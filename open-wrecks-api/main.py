@@ -26,12 +26,17 @@ REQUIRED_FIELDS = ["username", "password", "email", "name", "country"]
 
 def dms_to_decimal(coord_str):
     """
-    Convert DMS coordinate string to decimal.
-    Example input: "17°21'45.0\"S 152°02'50.6\"E"
+    Convert DMS or DMM coordinate string to decimal degrees.
+    Examples:
+        "17°21'45.0\"S 152°02'50.6\"E" -> full DMS
+        "34°26.775'S 151°55.48'E" -> decimal minutes
     Returns: (lat, lng)
     """
-    # regex to match DMS parts
-    dms_pattern = re.compile(r"(\d+)[°:\s](\d+)[\'\s](\d+(?:\.\d+)?)[\"\s]?([NSEW])", re.IGNORECASE)
+    # regex to match DMS or DMM parts
+    dms_pattern = re.compile(
+        r"(\d+)[°:\s](\d+(?:\.\d+)?)[\'\s](?:(\d+(?:\.\d+)?)[\"\s]?)?([NSEW])",
+        re.IGNORECASE
+    )
     matches = dms_pattern.findall(coord_str)
     
     if len(matches) != 2:
@@ -39,7 +44,10 @@ def dms_to_decimal(coord_str):
     
     def convert(match):
         deg, minutes, seconds, direction = match
-        decimal = float(deg) + float(minutes)/60 + float(seconds)/3600
+        deg = float(deg)
+        minutes = float(minutes)
+        seconds = float(seconds) if seconds else 0.0
+        decimal = deg + minutes/60 + seconds/3600
         if direction.upper() in ['S', 'W']:
             decimal = -decimal
         return decimal

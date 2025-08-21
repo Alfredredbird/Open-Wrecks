@@ -6,58 +6,18 @@ import "leaflet/dist/leaflet.css";
 import "./App.css";
 import L from 'leaflet';
 
-// FlyToPosition helper
-function FlyToPosition({ position, zoom }) {
-  const map = useMap();
-  if (position) map.flyTo(position, zoom, { duration: 1.5 });
-  return null;
-}
+import { boatIcon, homeIcon, junkyardIcon } from "./constants/MapIcons";
+import { mapStyles } from "./constants/mapStyles";
+
+import FlyToPosition from "./components/FlyToPosition";
+import ImageCarousel from "./components/ImageCarousel";
+import LoginWidget from "./components/LoginWidget";
+import SignupWidget from "./components/SignupWidget";
+import SubmitWidget from "./components/SubmitWidget";
+
+import { getDistance, getTotalDistance } from "./helpers/MathComponets";
+
 const API_BASE = `${window.location.protocol}//${window.location.hostname}:5000`;
-function ImageCarousel({ images }) {
-  const [current, setCurrent] = useState(0);
-
-  if (!images || images.length === 0) return null;
-  if (images.length === 1) return <img src={images[0]} alt="Ship" style={{ width: "100%" }} />;
-
-  const next = () => setCurrent((prev) => (prev + 1) % images.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  
-
-  return (
-    <div className="carousel">
-      <img src={images[current]} alt={`Ship ${current + 1}`} style={{ width: "100%" }} />
-      <div className="carousel-controls">
-        <button onClick={prev}>&lt;</button>
-        <span>{current + 1}/{images.length}</span>
-        <button onClick={next}>&gt;</button>
-      </div>
-    </div>
-  );
-}
-
-function getDistance(coord1, coord2) {
-  const R = 6371; // km
-  const dLat = (coord2[0] - coord1[0]) * Math.PI / 180;
-  const dLon = (coord2[1] - coord1[1]) * Math.PI / 180;
-  const lat1 = coord1[0] * Math.PI / 180;
-  const lat2 = coord2[0] * Math.PI / 180;
-
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.sin(dLon / 2) * Math.sin(dLon / 2) *
-    Math.cos(lat1) * Math.cos(lat2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c;
-}
-
-function getTotalDistance(coords) {
-  let total = 0;
-  for (let i = 1; i < coords.length; i++) {
-    total += getDistance(coords[i - 1], coords[i]);
-  }
-  return total;
-}
-
 
 
 function App() {
@@ -74,45 +34,6 @@ function App() {
   const [selectedMarkers, setSelectedMarkers] = useState([]);
   const [mapStyle, setMapStyle] = useState("osm"); // default
   const [userLocation, setUserLocation] = useState(null);
-
-  // maps
- const mapStyles = {
-  osm: {
-    name: "OpenStreetMap",
-    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  },
-  osmHot: {
-  name: "OpenStreetMap HOT",
-  url: "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-},
-  cartoLight: {
-    name: "Carto Light",
-    url: "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
-  },
-  cartoDark: {
-    name: "Carto Dark",
-    url: "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
-  },
-  stamenToner: {
-    name: "Stamen Toner",
-    url: "https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png",
-    attribution: '© <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> © <a href="https://stamen.com/" target="_blank">Stamen Design</a> © <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  },
-  stamenWatercolor: {
-    name: "Stamen Watercolor",
-    url: "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
-    attribution: '© <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> © <a href="https://stamen.com/" target="_blank">Stamen Design</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  },
-  stamenTerrain: {
-    name: "Stamen Terrain",
-    url: "https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png",
-    attribution: '© <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> © <a href="https://stamen.com/" target="_blank">Stamen Design</a> © <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }
-};
 
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
@@ -151,27 +72,6 @@ function App() {
   links: ""
 });
 
-  const boatIcon = new L.Icon({
-  iconUrl: 'boat.png',
-  iconSize: [32, 32], 
-  iconAnchor: [16, 32], 
-  popupAnchor: [0, -32],
-});
-
-  const homeIcon = new L.Icon({
-  iconUrl: 'home.png',
-  iconSize: [32, 32], 
-  iconAnchor: [16, 32], 
-  popupAnchor: [0, -32],
-});
-
-  const junkyardIcon = L.icon({
-  iconUrl: "warning.png", 
-  iconSize: [32, 32],             
-  iconAnchor: [16, 32],           
-  popupAnchor: [0, -32]           
-});
-
   const [message, setMessage] = useState("");
 
   // Account info
@@ -208,6 +108,21 @@ function App() {
     if (session) validateSession(session);
   }, []);
 
+  useEffect(() => {
+  // Get the ship ID from the URL
+  const path = window.location.pathname; // e.g., "/123"
+  const shipId = path.replace("/", ""); // "123"
+
+  if (!shipId) return;
+
+  // Wait until ships are loaded
+  if (ships.length > 0) {
+    const ship = ships.find(s => s.id.toString() === shipId);
+    if (ship) {
+      setFlyPosition([ship.lat, ship.lng]);
+    }
+  }
+}, [ships]);
   
   const validateSession = (session) => {
     fetch(`${API_BASE}/api/account`, {
@@ -731,201 +646,36 @@ const handleContactSupport = () => {
 )}
 
       {/* Login Widget */}
-      {showLogin && !account && (
-        <div className="overlay-widget">
-          <h2>Login</h2>
-          <input
-            type="text"
-            placeholder="Username"
-            value={loginData.username}
-            onChange={(e) =>
-              setLoginData({ ...loginData, username: e.target.value })
-            }
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={loginData.password}
-            onChange={(e) =>
-              setLoginData({ ...loginData, password: e.target.value })
-            }
-          />
-          <button onClick={handleLogin}>Submit</button>
-          <button onClick={() => setShowLogin(false)}>Close</button>
-          {message && <p>{message}</p>}
-        </div>
-      )}
+{showLogin && !account && (
+  <LoginWidget
+    loginData={loginData}
+    setLoginData={setLoginData}
+    handleLogin={handleLogin}
+    setShowLogin={setShowLogin}
+    message={message}
+  />
+)}
+{/* Submit Widget */}
 {showSubmit && (
-  <div className="overlay-widget">
-    <h2>Submit Shipwreck</h2>
-    
-    <input
-      type="text"
-      placeholder="Title"
-      value={submitData.title}
-      onChange={(e) => setSubmitData({...submitData, title: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Latitude or DMS"
-      value={submitData.lat}
-      onChange={(e) => setSubmitData({...submitData, lat: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Longitude"
-      value={submitData.lng}
-      onChange={(e) => setSubmitData({...submitData, lng: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="IMO Number (if any)"
-      value={submitData.imo}
-      onChange={(e) => setSubmitData({...submitData, imo: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Date"
-      value={submitData.date}
-      onChange={(e) => setSubmitData({...submitData, date: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Owner"
-      value={submitData.owner}
-      onChange={(e) => setSubmitData({...submitData, owner: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Port of Registry"
-      value={submitData.port_of_registry}
-      onChange={(e) => setSubmitData({...submitData, port_of_registry: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Type"
-      value={submitData.type}
-      onChange={(e) => setSubmitData({...submitData, type: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Tonnage"
-      value={submitData.tonnage}
-      onChange={(e) => setSubmitData({...submitData, tonnage: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Draught"
-      value={submitData.draught}
-      onChange={(e) => setSubmitData({...submitData, draught: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Length"
-      value={submitData.length}
-      onChange={(e) => setSubmitData({...submitData, length: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Beam"
-      value={submitData.beam}
-      onChange={(e) => setSubmitData({...submitData, beam: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Capacity"
-      value={submitData.capacity}
-      onChange={(e) => setSubmitData({...submitData, capacity: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Crew"
-      value={submitData.crew}
-      onChange={(e) => setSubmitData({...submitData, crew: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Builder"
-      value={submitData.builder}
-      onChange={(e) => setSubmitData({...submitData, builder: e.target.value})}
-    />
-
-    <textarea
-      placeholder="Description (Markdown)"
-      value={submitData.description}
-      onChange={(e) => setSubmitData({...submitData, description: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Images (comma separated URLs)"
-      value={submitData.images}
-      onChange={(e) => setSubmitData({...submitData, images: e.target.value})}
-    />
-    <input
-      type="text"
-      placeholder="Links (comma separated URLs)"
-      value={submitData.links}
-      onChange={(e) => setSubmitData({...submitData, links: e.target.value})}
-    />
-    
-    <button onClick={handleSubmitShip}>Submit</button>
-    <button onClick={() => setShowSubmit(false)}>Close</button>
-    {message && <p>{message}</p>}
-  </div>
+  <SubmitWidget
+    submitData={submitData}
+    setSubmitData={setSubmitData}
+    handleSubmitShip={handleSubmitShip}
+    setShowSubmit={setShowSubmit}
+    message={message}
+  />
 )}
 
-
-
-
-      {/* Signup Widget */}
-      {showSignup && !account && (
-        <div className="overlay-widget">
-          <h2>Signup</h2>
-          <input
-            type="text"
-            placeholder="Username"
-            value={signupData.username}
-            onChange={(e) =>
-              setSignupData({ ...signupData, username: e.target.value })
-            }
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={signupData.password}
-            onChange={(e) =>
-              setSignupData({ ...signupData, password: e.target.value })
-            }
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={signupData.email}
-            onChange={(e) =>
-              setSignupData({ ...signupData, email: e.target.value })
-            }
-          />
-          <input
-            type="text"
-            placeholder="Name"
-            value={signupData.name}
-            onChange={(e) =>
-              setSignupData({ ...signupData, name: e.target.value })
-            }
-          />
-          <input
-            type="text"
-            placeholder="Country"
-            value={signupData.country}
-            onChange={(e) =>
-              setSignupData({ ...signupData, country: e.target.value })
-            }
-          />
-          <button onClick={handleSignup}>Submit</button>
-          <button onClick={() => setShowSignup(false)}>Close</button>
-          {message && <p>{message}</p>}
-        </div>
-      )}
+     {/* Signup Widget */}
+{showSignup && !account && (
+  <SignupWidget
+    signupData={signupData}
+    setSignupData={setSignupData}
+    handleSignup={handleSignup}
+    setShowSignup={setShowSignup}
+    message={message}
+  />
+)}
     </div>
   );
 }

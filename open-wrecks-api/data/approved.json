@@ -1132,5 +1132,33 @@
     "capacity": "",
     "crew": "",
     "builder": ""
+  },
+  {
+    "id": 67,
+    "title": "SS Bombo",
+    "lat": -34.44625,
+    "lng": 151.92466666666667,
+    "imo": 0,
+    "description": "# SS Bombo Summary\n\nSS Bombo was a steel-hulled coastal freighter built in 1929 in Leith, Scotland, and sailed to Australia to transport blue metal (basalt aggregate) from Kiama to Sydney. Measuring 154 feet long with a 30-foot beam and 12-foot draught, she displaced 540 GRT and carried 14 crew. Owned initially by State Metal Quarries and later Quarries Pty Ltd, she was requisitioned by the Royal Australian Navy during World War II, serving as an auxiliary minesweeper and stores carrier in northern Australian waters and West Timor, before returning to civilian service in 1946. On 22 February 1949, while carrying 640 tonnes of blue metal from Kiama, Bombo encountered a gale off Port Kembla, and shifting cargo caused her to capsize and sink, killing 12 of her 14 crew. Survivors clung to debris for hours before reaching shore, aided by local rescuers, and the ship\u2019s dog also survived. A Court of Marine Inquiry found the ship was properly loaded and managed, concluding that shifting cargo led to the disaster. The wreck is now a popular dive site, and a memorial stands on Black Beach, Kiama.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Bombo-awm-303010-cropped.jpg/330px-Bombo-awm-303010-cropped.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/HMAS_Bombo.jpg/250px-HMAS_Bombo.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bombo-awm-300444.jpg/250px-Bombo-awm-300444.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Bombo"
+    ],
+    "submitted_by": "explorer",
+    "date": "1929",
+    "owner": "State Metal Quarries",
+    "port_of_registry": "",
+    "type": "Steel-hulled coastal freighter",
+    "tonnage": "540 GRT",
+    "draught": "3.7",
+    "length": "47",
+    "beam": "9.1",
+    "capacity": "",
+    "crew": "14",
+    "builder": "H. Robb, Leith"
   }
 ]
