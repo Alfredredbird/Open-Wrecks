@@ -427,5 +427,100 @@
       "https://www.aukevisser.nl/supertankers/VLCC-P-Q/id1286.htm"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 27,
+    "title": "MV Captayannis (Sugar Boat",
+    "lat": 55.975792123409654,
+    "lng": -4.7419024458502195,
+    "imo": 5415212,
+    "description": "# MV Captayannis\n\n**Type:** Merchant vessel (Sugar carrier)  \n**Flag:** Greece  \n**IMO Number:** 5415212  \n**Built:** 1946, A/S Nakskov Skibbs, Denmark  \n**Launched:** 15 June 1946 as Norden  \n**Renamed:** Captayannis, 1963  \n**Dimensions:**  \n- Length: 396 ft (121 m)  \n- Beam: 56 ft 4 in (17.17 m)  \n- Draught: 25 ft (7.6 m)  \n**Tonnage:** 4,576 GRT  \n\n## Sinking\n- Date: 27 January 1974  \n- Location: Sandbank between Greenock and Helensburgh, Firth of Clyde, Scotland  \n- Coordinates: 55\u00b058\u203234\u2033N, 4\u00b044\u203231\u2033W  \n- Cause: Dragged anchor during storm; struck anchor chains of BP tanker *British Light*; beached on sandbank to prevent sinking  \n- Rescue: Crew evacuated using pilot boats and tug; all survived  \n- Aftermath: Vessel rolled onto its side and has remained as a wreck; locally known as the \"Sugar Boat\"\n\n## Wreck Condition\n- Substantially intact, steel hull and superstructure remain  \n- Wooden decking partially preserved  \n- Habitat for marine life and birds  \n- Accessible via boat tours from Greenock  \n- Recent storms accelerating deterioration (reported 2025)\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/MV_Captayannis-May2023-Hassan_Ghani.jpg/250px-MV_Captayannis-May2023-Hassan_Ghani.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/MV_Captayannis_-_geograph.org.uk_-_1241375.jpg/250px-MV_Captayannis_-_geograph.org.uk_-_1241375.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/MV_Captayannis"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 28,
+    "title": "SS Mahen",
+    "lat": -25.267222,
+    "lng": 153.238333,
+    "imo": 117588,
+    "description": "# SS Maheno\n\n**Type:** Ocean liner / Hospital ship (WWI)  \n**Flag:** New Zealand  \n**Owner:** Union Company, Dunedin  \n**IMO Number / Official Number:** 117588  \n**Built:** 1905, William Denny and Brothers, Dumbarton, Scotland  \n**Launched:** 19 June 1905  \n**Out of Service:** 1935  \n**Dimensions:**  \n- Length: 400 ft (120 m)  \n- Beam: 50 ft (15 m)  \n- Depth: 31 ft (9.4 m)  \n- Speed: 17.5 knots  \n**Tonnage:** 5,323 GRT, 3,318 NRT  \n**Passenger Capacity:** 420 (240 1st class, 120 2nd, 60 3rd)  \n\n## Service History\n- Operated between New Zealand and Australia; also voyaged to Vancouver and UK  \n- Served as His Majesty's New Zealand Hospital Ship No. 1 during World War I  \n- Carried wounded from Gallipoli and Western Front; staffed by doctors, orderlies, and nurses  \n\n## Fate / Wreck\n- Wrecked: July 1935, K'gari (Fraser Island), Queensland, Australia  \n- Circumstances: Being towed to shipbreaker yard; towline broke in cyclone, drifted ashore  \n- Crew survived by camping onshore until rescue arrived  \n- Wreck remains on the beach; site of historical interest and annual Anzac Day services  \n- Dangerous condition; access prohibited; listed as UXO-contaminated  \n\n## Coordinates\n- **Latitude:** 25.2660\u00b0S  \n- **Longitude:** 153.2385\u00b0E\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Hospital_Ship_Maheno.jpg/250px-Hospital_Ship_Maheno.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/StateLibQld_1_163239_Maheno_%28ship%29.jpg/250px-StateLibQld_1_163239_Maheno_%28ship%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fraser_Island_shipwreck_of_Maheno_%28ship_1905%29_IGP4364.jpg/250px-Fraser_Island_shipwreck_of_Maheno_%28ship_1905%29_IGP4364.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/SS_Maheno_on_Fraser_Island_2013-12-30.jpg/250px-SS_Maheno_on_Fraser_Island_2013-12-30.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Wrack_der_S.S._Maheno_%28M%C3%A4rz_2023%29.jpg/250px-Wrack_der_S.S._Maheno_%28M%C3%A4rz_2023%29.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Maheno"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 29,
+    "title": "Unmarked Ship Wreck",
+    "lat": 69.82254710132469,
+    "lng": 31.643954363877228,
+    "imo": 0,
+    "description": "Not Much Is Known!",
+    "images": [
+      ""
+    ],
+    "links": [
+      ""
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 30,
+    "title": "Kinsyo Maru #8",
+    "lat": 14.646667,
+    "lng": 169.014722,
+    "imo": 0,
+    "description": "Not Much Is Known!",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://wikimapia.org/10674060/Ship-Wreck"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 31,
+    "title": "SS Norwich City",
+    "lat": -4.660833,
+    "lng": -174.545,
+    "imo": 0,
+    "description": "# SS Norwich City\n\n**SS Norwich City** was a British cargo steamship, built in 1911 as *Normanby* and renamed in 1919. She was wrecked in 1929 on Nikumaroro Atoll in the Pacific Ocean. For decades, her remains served as a landmark before breaking up.\n\n---\n\n## Quick Facts\n- **Built:** 1911 by Wm Gray & Co, West Hartlepool  \n- **Original Name:** *Normanby*  \n- **Renamed:** *Norwich City* (1919)  \n- **Owner:**  \n  - 1911: London & Northern SS Co  \n  - 1917: St Just SS Co  \n  - 1929: Reardon Smith Line  \n- **Tonnage:** 4,219 GRT  \n- **Length:** 397 ft (121 m)  \n- **Propulsion:** Triple-expansion steam engine, 11 knots  \n- **Crew:** 35  \n- **Fate:** Grounded, 29 November 1929  \n\n---\n\n## History\n\n### Building\n- Sister ship to *Cloughton*, both built on the River Tees in 1911.  \n- Powered by a triple-expansion steam engine, carrying cargo in six holds.  \n\n### Ownership\n- Operated by Pyman Brothers, later Wm Reardon Smith & Sons.  \n- Registered first in London, later in Bideford, Devon.  \n- Converted from coal to oil fuel by 1924.  \n\n### 1928 Collision\n- Struck the Second Narrows Rail Bridge in Vancouver.  \n- Lost masts, funnel, and had superstructure damage.  \n- Repaired by Burrard Dry Dock.  \n\n---\n\n## Wreck of 1929\n- **Voyage:** Left Melbourne for Vancouver via Honolulu.  \n- **Grounding:** 29 Nov 1929, storm drove her onto a reef at Gardner Island (Nikumaroro).  \n- **Fire & Disaster:** Engine room caught fire; lifeboats capsized in rough seas.  \n- **Losses:** 11 men died (drowning, reef injuries, sharks). Survivors made camp ashore.  \n\n---\n\n## Rescue\n- Wireless operator managed to signal Apia, Western Samoa.  \n- British ship *Trongate* and Norwegian tanker *Lincoln Ellsworth* responded.  \n- Indigenous surfboat crew (from Tuvalu, Niue, Tokelau) bravely ferried survivors through dangerous surf.  \n- Survivors split between *Lincoln Ellsworth* (to Sydney) and *Trongate* (to Apia).  \n- Court of Inquiry praised islanders\u2019 seamanship; each awarded \u00a35 by the Royal Humane Society of Australasia.  \n\n---\n\n## Later Wreckage\n- Wreck remained visible for decades.  \n- By 1989: only keel, engine, bunker tanks, and one boiler remained.  \n- By 2016: boiler and engine gone; only scattered remains survived.  \n\n---\n\n## Legacy\n- Sometimes linked to **Amelia Earhart** investigations, as some theorize her transmissions referred to the *Norwich City* wreck on Nikumaroro.  \n\n---\n\n## See Also\n- Gardner Island hypothesis (Earhart disappearance)  \n\n---\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Norwich_City"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 32,
+    "title": "Ai Sokula",
+    "lat": -9.325,
+    "lng": -171.214722,
+    "imo": 0,
+    "description": "Not Much Is Known!",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://www.geonames.org/7603115/vessel-ai-sokula-wreck.html"
+    ],
+    "submitted_by": "explorer"
   }
 ]
