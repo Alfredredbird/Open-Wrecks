@@ -245,3 +245,130 @@
   border-radius: 8px;
   color: white;
 }
+@media (max-width: 768px) {
+  /* Topbar */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .topbar h1 {
+    font-size: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Layout */
+  .app-container {
+    flex-direction: column;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .ship-widget {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 140px;
+  }
+
+  .ship-widget h3 {
+    font-size: 14px;
+  }
+
+  /* Buttons inside sidebar */
+  .buttons {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .buttons button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Map */
+  .map-container {
+    min-height: 300px;
+  }
+
+  /* Overlay widget (login/signup) */
+  .overlay-widget {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Profile card */
+  .profile-card {
+    bottom: 20px;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+
+  /* Options sidebar */
+  .options-sidebar {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    top: auto;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar h1 {
+    font-size: 18px;
+  }
+
+  .ship-widget {
+    flex: 1 1 100%;
+  }
+
+  .buttons button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .notification {
+    width: calc(100% - 40px);
+    right: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .carousel-controls span {
+    font-size: 10px;
+  }
+}@media (max-width: 768px) {
+  .ship-widget-img {
+    max-height: 100px;
+    width: 100%;
+  }
+
+  .ship-widget {
+    padding: 4px;
+  }
+}
+
+/* Mobile (phones) */
+@media (max-width: 480px) {
+  .ship-widget-img {
+    max-height: 70px;
+    width: 100%;
+  }
+
+  .ship-widget h3 {
+    font-size: 13px;
+  }
+}
