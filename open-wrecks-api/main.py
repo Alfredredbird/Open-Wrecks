@@ -3,6 +3,7 @@ import json
 import os
 import uuid
 from flask_cors import CORS 
+import re
 
 app = Flask(__name__)
 PENDING_FILE = "data/pending.json"
@@ -20,6 +21,34 @@ for file in [PENDING_FILE, APPROVED_FILE, ACCOUNT_FILE]:
             json.dump([], f)
 
 REQUIRED_FIELDS = ["username", "password", "email", "name", "country"]
+
+
+
+def dms_to_decimal(coord_str):
+    """
+    Convert DMS coordinate string to decimal.
+    Example input: "17°21'45.0\"S 152°02'50.6\"E"
+    Returns: (lat, lng)
+    """
+    # regex to match DMS parts
+    dms_pattern = re.compile(r"(\d+)[°:\s](\d+)[\'\s](\d+(?:\.\d+)?)[\"\s]?([NSEW])", re.IGNORECASE)
+    matches = dms_pattern.findall(coord_str)
+    
+    if len(matches) != 2:
+        raise ValueError("Invalid DMS coordinate format")
+    
+    def convert(match):
+        deg, minutes, seconds, direction = match
+        decimal = float(deg) + float(minutes)/60 + float(seconds)/3600
+        if direction.upper() in ['S', 'W']:
+            decimal = -decimal
+        return decimal
+    
+    lat = convert(matches[0])
+    lng = convert(matches[1])
+    
+    return lat, lng
+
 
 ### Signup endpoint
 @app.route("/api/signup", methods=["POST"])
@@ -262,18 +291,31 @@ def submit_shipwreck():
         all_ids = [item.get("id", 0) for item in pending_data + approved_data]
         new_id = max(all_ids, default=0) + 1
 
+        coord_input = data.get("lat", 0)
+        lng_input = data.get("lng", 0)
+
+        # If user submitted as DMS string instead of decimal, convert it
+        if isinstance(coord_input, str) and any(c in coord_input for c in "°'\""):
+            try:
+                lat, lng = dms_to_decimal(coord_input)
+            except Exception as e:
+                return jsonify({"error": f"Invalid coordinate format: {str(e)}"}), 400
+        else:
+            lat = float(coord_input)
+            lng = float(lng_input)
 
         new_ship = {
-            "id": new_id,
-            "title": data.get("title", ""),
-            "lat": float(data.get("lat", 0)),
-            "lng": float(data.get("lng", 0)),
-            "imo": int(data.get("imo")),
-            "description": data.get("description", ""),
-            "images": data.get("images", []),
-            "links": data.get("links", []),
-            "submitted_by": user["username"]
-        }
+        "id": new_id,
+        "title": data.get("title", ""),
+        "lat": lat,
+        "lng": lng,
+        "imo": int(data.get("imo")),
+        "description": data.get("description", ""),
+        "images": data.get("images", []),
+        "links": data.get("links", []),
+        "submitted_by": user["username"]
+    }
+
 
         pending_data.append(new_ship)
 

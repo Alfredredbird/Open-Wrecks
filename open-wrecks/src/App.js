@@ -716,7 +716,7 @@ const handleContactSupport = () => {
     />
     <input
       type="text"
-      placeholder="Latitude"
+      placeholder="Latitude or DMS"
       value={submitData.lat}
       onChange={(e) => setSubmitData({...submitData, lat: e.target.value})}
     />

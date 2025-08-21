@@ -553,5 +553,35 @@
       "https://en.wikipedia.org/wiki/SS_Kyle"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 35,
+    "title": "SS Vina",
+    "lat": 52.98530539385302,
+    "lng": 0.6543796198461916,
+    "imo": 0,
+    "description": "# SS Vina (1894)\n\n**SS Vina** was a 1,021 GRT coastal cargo ship built in 1894 by Ramage & Ferguson at Leith, registered at Grangemouth. Originally a general cargo vessel operating between the east coast of England and the Baltic, she ended her career as a naval target and blockship during World War II. Her wreck is now mostly buried in sand near Brancaster.\n\n---\n\n## Quick Facts\n- **Built:** 1894, Ramage & Ferguson, Leith, Scotland  \n- **Tonnage:** 1,021 GRT  \n- **Type:** Coastal cargo ship / coaster  \n- **Owner/Registry:** Grangemouth, Scotland  \n- **Crew (WWII):** 12  \n- **Fate:** Ran ashore on 20 August 1944 during RAF target practice  \n- **Location:** Near Brancaster, Norfolk, UK  \n\n---\n\n## Service History\n- Served as a **coastal general cargo ship** between England\u2019s east coast and Baltic ports.  \n- **1940:** Requisitioned as a blockship during WWII to defend Great Yarmouth; would have been sunk with concrete and explosives to block the harbor in case of Nazi invasion.  \n- **Post-blockship service:** Towed to Brancaster for RAF target practice prior to the Normandy invasion.  \n- **20 August 1944:** Dragged anchor in a north-westerly gale and ran ashore on a sandbank.  \n\n---\n\n## Wreck and Legacy\n- Initially visible at low tide; now mostly covered by drifting sand.  \n- Parts have been removed over the years; in 1968, the bronze propeller was salvaged and floated across the harbor channel.  \n- Wreck is considered **a danger to navigation** and attracts visitors at low tide, leading to several rescue incidents.  \n- Local lifeboats and RAF helicopters have been used to rescue people attempting to reach the wreck.  \n- Warning signs are posted advising visitors to stay on the beach.  \n\n---\n\n## Notes\n- Wreck removal abandoned as uneconomic.  \n- Serves as a historical reminder of WWII coastal defense and training operations.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/SS_Vina%2C_The_Brancaster_Wreck.jpg/250px-SS_Vina%2C_The_Brancaster_Wreck.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Brancaster"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 36,
+    "title": "SS Dominator",
+    "lat": 33.7745974888155,
+    "lng": -118.42798103900613,
+    "imo": 0,
+    "description": "# SS Dominator (1944)\n\n**SS Dominator** was a Liberty ship built during World War II that ran aground off Palos Verdes, California, in 1961. The wreck remains visible today and is a popular landmark for hikers and kayakers.\n\n---\n\n## Quick Facts\n- **Original Name:** Melville Jacoby  \n- **Other Names:** Victoria (1947\u20131950), North Queen (1950\u20131953), Dominator (1953\u20131961)  \n- **Built:** 1944, Walsh-Kaiser Company, Providence, Rhode Island, USA  \n- **Type:** Liberty ship  \n- **Displacement:** 14,245 long tons  \n- **Length:** 441 ft 6 in (134.57 m) overall  \n- **Beam:** 57 ft (17 m)  \n- **Draft:** 27 ft 9 in (8.46 m)  \n- **Propulsion:** Triple-expansion steam engine, single screw, 2,500 hp  \n- **Speed:** 11 knots (13 mph; 20 km/h)  \n- **Crew:** 81  \n- **Cargo:** Wheat and beef on final voyage  \n- **Fate:** Wrecked on 13 March 1961  \n\n---\n\n## Service History\n- Launched on 31 March 1944, named after war correspondent Melville Jacoby.  \n- Operated during WWII by the Wilmore Steamship Company under the War Shipping Administration.  \n- Sold into commercial service in 1947 under the Panamanian flag, undergoing multiple renamings: Victoria \u2192 North Queen \u2192 Dominator.  \n\n---\n\n## Wreck\n- On 13 March 1961, **Dominator ran aground off Palos Verdes** while en route from Vancouver to Los Angeles in fog.  \n- Two days of rescue attempts by the Coast Guard and tugboats failed; crew abandoned ship.  \n- Hull and cargo were auctioned separately; salvaging disputes occurred.  \n- The ship gradually broke apart under wave action; large sections of wreckage remain scattered along the shore.  \n- As of 2024, remnants are still visible and accessible for hikers and kayakers.\n\n---\n\n## Notes\n- Liberty ship with wartime origins, later used in commercial trade.  \n- Remains a California coastal landmark and point of historical interest.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Shipwreck03.jpg/250px-Shipwreck03.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Dominator"
+    ],
+    "submitted_by": "explorer"
   }
 ]
