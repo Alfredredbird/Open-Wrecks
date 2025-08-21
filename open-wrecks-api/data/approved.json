@@ -1160,5 +1160,31 @@
     "capacity": "",
     "crew": "14",
     "builder": "H. Robb, Leith"
+  },
+  {
+    "id": 68,
+    "title": "Bonnie Dundee",
+    "lat": -33.10545,
+    "lng": 151.7043,
+    "imo": 0,
+    "description": "# SS Bonnie Dundee\n\nThe **SS Bonnie Dundee** was a 193/121 gross register ton Australian steamship that sank after colliding with the steamship **SS Barrabool** off Lake Macquarie, New South Wales, Australia, on **10 March 1879**.\n\n---\n\n## History\n\n- **Built:** Gourlay Brothers & Company, Dundee, Scotland  \n- **Owners:** George & Bruce Nicoll, Sydney, Australia  \n- **Launched:** 2 March 1877  \n- **Voyage to Australia:**  \n  - Departed Dundee: 28 March 1877  \n  - Route: via Suez Canal, stopping at Ceylon  \n  - Arrived Cooktown: 27 June 1877  \n  - Arrived Sydney: 18 July 1877  \n\nOriginally intended for trade from the Richmond River, New South Wales.\n\n---\n\n## Sinking\n\n- **Date:** 10 March 1879  \n- **Event:** Collided with **SS Barrabool** (Capt. John Readman Clark) while under charter and captained by **John Alexander Stuart**.  \n- **Outcome:**  \n  - Bonnie Dundee was cut in two and sank within minutes.  \n  - **Casualties:** 5 passengers lost.  \n  - Barrabool sustained a gash in her port bow above the waterline.  \n\n---\n\n## Wreck Location\n\n- **Depth:** ~35 metres (115 ft)  \n- **Distance:** ~5 km (3 mi) off **Caves Beach**, southeast of **Moon Island**  \n- **Coordinates:** `33\u00b006.327\u2032S 151\u00b042.258\u2032E`\n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/SS_Bonnie_Dundee_(1877)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1877",
+    "owner": "George & Bruce Nicoll",
+    "port_of_registry": "Sydney",
+    "type": "",
+    "tonnage": "193/121",
+    "draught": "3",
+    "length": "39.7",
+    "beam": "6",
+    "capacity": "",
+    "crew": "",
+    "builder": "Gourlay Brothers and Company"
   }
 ]

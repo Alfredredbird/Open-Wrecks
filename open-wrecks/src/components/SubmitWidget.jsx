@@ -66,7 +66,7 @@ export default function SubmitWidget({ submitData, setSubmitData, handleSubmitSh
       />
       <input
         type="text"
-        placeholder="Draught"
+        placeholder="Draught (meters)"
         value={submitData.draught}
         onChange={(e) =>
           setSubmitData({ ...submitData, draught: e.target.value })
@@ -74,7 +74,7 @@ export default function SubmitWidget({ submitData, setSubmitData, handleSubmitSh
       />
       <input
         type="text"
-        placeholder="Length"
+        placeholder="Length (meters)"
         value={submitData.length}
         onChange={(e) =>
           setSubmitData({ ...submitData, length: e.target.value })
@@ -82,7 +82,7 @@ export default function SubmitWidget({ submitData, setSubmitData, handleSubmitSh
       />
       <input
         type="text"
-        placeholder="Beam"
+        placeholder="Beam (meters)"
         value={submitData.beam}
         onChange={(e) => setSubmitData({ ...submitData, beam: e.target.value })}
       />
