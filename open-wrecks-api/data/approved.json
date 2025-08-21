@@ -583,5 +583,35 @@
       "https://en.wikipedia.org/wiki/SS_Dominator"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 37,
+    "title": "Tiran",
+    "lat": 14.030805555555556,
+    "lng": -16.773194444444442,
+    "imo": 5361954,
+    "description": "Not Much Known!",
+    "images": [
+      ""
+    ],
+    "links": [
+      "http://www.buques.org/Navieras/Davila/Davila_E.htm"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 38,
+    "title": "MV Free Enterprise III",
+    "lat": 21.376452571347144,
+    "lng": 39.12033661543641,
+    "imo": 6611461,
+    "description": "# MV Free Enterprise III (1966 / Al Fahad)\n\n**MV Free Enterprise III** was a Ro-Pax cross-channel ferry built in 1966, later sold to Egyptian owners and wrecked in the Red Sea in 2004. The wreck is now a popular scuba dive site.\n\n---\n\n## Quick Facts\n- **Original Name:** Free Enterprise III  \n- **Other Names:** Tamira (1984), Mona's Isle (1984\u20131985), Al Fahad (1986\u20132004)  \n- **Built:** 1966, NV Werf \"Gusto\", Schiedam, Netherlands  \n- **Type:** Ro-Pax ferry  \n- **Tonnage:** 4,657 GRT; 839 DWT  \n- **Length:** 117.51 m (385.5 ft)  \n- **Beam:** 19.08 m (62.6 ft)  \n- **Draught:** 4.06 m (13.3 ft)  \n- **Propulsion:** Twin-screw; 2 \u00d7 12-cylinder + 2 \u00d7 6-cylinder engines, 11,540 bhp  \n- **Speed:** 20 knots (23 mph)  \n- **Capacity:** 1,200 passengers; 120 cars  \n- **Fate:** Wrecked near Jeddah, Saudi Arabia, 2004  \n\n---\n\n## Service History\n- **1966\u20131984:** Operated by Townsend Thoresen on Dover-Calais and Dover-Zeebrugge routes; briefly on Cairnryan-Larne (1974) and Portsmouth-Cherbourg (1981).  \n- **1984:** Sold to Mira Shipping Line, Valletta (renamed Tamira).  \n- **1984\u20131985:** Purchased by Isle of Man Steam Packet Company; renamed Mona's Isle; operated Douglas-Heysham route. Service was short-lived due to docking difficulties.  \n- **1986\u20132004:** Sold to Sadaka Shipping, Saudi Arabia; renamed Al Fahad and operated Jeddah-Suez route.  \n\n---\n\n## Wreck\n- Suffered engine problems in June 2004, anchored in the Red Sea, and subsequently abandoned.  \n- Wreck lies ~35 km south of Jeddah, within 200 metres of the shoreline.  \n- Popular site for scuba diving.\n\n---\n\n## Notes\n- Designed by naval architect Wallace James Ayers.  \n- Experienced multiple ownerships and name changes over her 38-year operational life.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Al-Fahad.jpg/330px-Al-Fahad.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/MV_Free_Enterprise_III"
+    ],
+    "submitted_by": "explorer"
   }
 ]
