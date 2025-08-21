@@ -106,9 +106,7 @@ You’re free to use, modify, and distribute it — just give credit.
 
 ## 🌐 Links
 
-🐙 GitHub: [Open-Wrecks](https://github.com/alfredredbird/Open-Wrecks)
-
-📽️ YouTube: [@alfredredbird](https://youtube.com/@alfredredbird)
+📽️ Youtube Demo: https://youtu.be/Nf2mrm8cocI
 
 📖 Docs: (Coming soon)
 
