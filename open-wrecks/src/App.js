@@ -73,6 +73,8 @@ function App() {
   const [measureMode, setMeasureMode] = useState(false);
   const [selectedMarkers, setSelectedMarkers] = useState([]);
   const [mapStyle, setMapStyle] = useState("osm"); // default
+  const [userLocation, setUserLocation] = useState(null);
+
   // maps
  const mapStyles = {
   osm: {
@@ -140,6 +142,13 @@ function App() {
 
   const boatIcon = new L.Icon({
   iconUrl: 'boat.png',
+  iconSize: [32, 32], 
+  iconAnchor: [16, 32], 
+  popupAnchor: [0, -32],
+});
+
+  const homeIcon = new L.Icon({
+  iconUrl: 'home.png',
   iconSize: [32, 32], 
   iconAnchor: [16, 32], 
   popupAnchor: [0, -32],
@@ -282,6 +291,25 @@ const handleContactSupport = () => {
     .catch(err => setMessage("Failed to submit: " + err));
 };
 
+  const requestUserLocation = () => {
+  if (!navigator.geolocation) {
+    setMessage("Geolocation is not supported by your browser.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+      setUserLocation([latitude, longitude]);
+      setFlyPosition([latitude, longitude]); // optional: fly to user
+      setMessage("Your location has been found!");
+    },
+    (error) => {
+      setMessage("Unable to retrieve your location: " + error.message);
+    }
+  );
+};
+
 
   const handleLogin = () => {
     fetch(`${API_BASE}/api/login`, {
@@ -396,6 +424,14 @@ const handleContactSupport = () => {
 />
 
             {flyPosition && <FlyToPosition position={flyPosition} zoom={6} />}
+            {userLocation && (
+  <Marker position={userLocation} icon={homeIcon}>
+    <Popup>
+      <strong>You are here!</strong>
+    </Popup>
+  </Marker>
+)}
+
             {showMarkers &&
   ships.map((ship) => (
     <Marker key={ship.id} position={[ship.lat, ship.lng]} icon={boatIcon}eventHandlers={{
@@ -576,7 +612,10 @@ const handleContactSupport = () => {
     <button onClick={() => setShowCoordinates(!showCoordinates)}>
       {showCoordinates ? "Hide Coordinates" : "Show Coordinates"}
     </button>
-    
+      <button onClick={requestUserLocation}>
+  Show My Location
+</button>
+
     <button onClick={() => setShowMarkers(!showMarkers)}>
       {showMarkers ? "Hide Markers" : "Show Markers"}
     </button>
