@@ -1076,5 +1076,61 @@
     "capacity": "",
     "crew": "",
     "builder": "Samuda Brothers"
+  },
+  {
+    "id": 65,
+    "title": "HMAS Arunta",
+    "lat": -33.8333,
+    "lng": 151.3167,
+    "imo": 0,
+    "description": "# HMAS Arunta (I30)\n\n**Type:** Tribal-class destroyer  \n**Builder:** Cockatoo Docks and Engineering Company, Cockatoo Island, Sydney  \n**Laid down:** 15 November 1939  \n**Launched:** 30 November/1 December 1940  \n**Commissioned:** 30 March 1942  \n**Decommissioned:** 21 December 1956  \n**Fate:** Sold for scrap in 1968; sank under tow in 1969  \n**Motto:** \"Conquer or Die\"  \n**Namesake:** Arrernte people  \n\n## General Characteristics\n- **Displacement:** 1,990 tons (launch), 2,122 tons (1945 refit)  \n- **Length:** 377 ft 1 in (114.94 m) overall  \n- **Beam:** 36 ft 4.75 in (11.09 m)  \n- **Draught:** 9 ft (2.7 m)  \n- **Propulsion:** Parsons geared turbines, twin screws, 44,000 hp  \n- **Speed:** 36.5 knots (67.6 km/h)  \n- **Complement:** 12 officers, 178 sailors (initial); 13 officers, 247 sailors (later)  \n\n## Armament\n- **At launch:**  \n  - 6 \u00d7 QF 4.7-inch guns (3 twin turrets)  \n  - 2 \u00d7 QF 4-inch AA guns (1 twin turret)  \n  - 6 \u00d7 20 mm Oerlikon AA guns  \n  - 1 \u00d7 2-pounder quadruple pom pom  \n  - 4-tube 21-inch torpedo launcher (4 torpedoes)  \n  - 2 \u00d7 depth charge throwers (46 charges)  \n- **1945 refit:**  \n  - All Oerlikons removed  \n  - 6 \u00d7 40 mm Bofors installed  \n- **1949 modernisation:**  \n  - Aft 4.7-in turret removed  \n  - Depth charge throwers removed  \n  - Quadruple pom pom replaced with 2 \u00d7 40 mm Bofors (twin mount)  \n  - 1 \u00d7 Squid anti-submarine mortar installed  \n\n## Service History\n\n### World War II\n- Began service 17 May 1942 with anti-submarine patrols off New South Wales.  \n- Sank Japanese submarine **Ro-33** off Port Moresby on 24 August 1942.  \n- Supported troop landings and shore bombardments at **Arawe, Cape Gloucester, Saidor, Hollandia, Wakde, Biak, Noemfoor, Cape Sansapor, Morotai, Leyte Gulf, Lingayen Gulf, Wewak, Brunei Bay, Balikpapan**.  \n- Part of **United States 7th Fleet**; earned battle honours: Pacific 1942\u201345, New Guinea 1942\u201344, Leyte Gulf 1944, Lingayen Gulf 1945, Borneo 1945.  \n\n### Post-war\n- Deployed to Japan with the British Commonwealth Occupation Force (1945\u20131947).  \n- Modernisation 1949\u20131952; reclassified as **anti-submarine destroyer**.  \n- Served in Korea post-armistice and in the Far East Strategic Reserve.  \n- Decommissioned 21 December 1956; sailed 357,273 nautical miles in career.  \n\n### Fate\n- Sold for scrap 1 November 1968 to China Steel Corporation, Taipei.  \n- Sank under tow by Japanese tug **Tokyo Maru** off Broken Bay on 13 February 1969.  \n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/HMAS_Arunta_SLV_AllanGreen_1.jpg/330px-HMAS_Arunta_SLV_AllanGreen_1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/HMAS_Arunta_I30_July_1943.jpg/250px-HMAS_Arunta_I30_July_1943.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/HMAS_Arunta_%28AWM_300196%29.jpg/250px-HMAS_Arunta_%28AWM_300196%29.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/HMAS_Arunta_(I30)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1942",
+    "owner": "Royal Australian Navy",
+    "port_of_registry": "",
+    "type": "Tribal-class destroyer",
+    "tonnage": "",
+    "draught": "2.7 ",
+    "length": "114.94",
+    "beam": "11.0935",
+    "capacity": "",
+    "crew": "",
+    "builder": "Cockatoo Docks "
+  },
+  {
+    "id": 66,
+    "title": "HMAS Australia",
+    "lat": -33.86505833333334,
+    "lng": 155.74030833333333,
+    "imo": 0,
+    "description": "# HMAS Australia (1911) Summary\n\nHMAS Australia was an Indefatigable-class battlecruiser built for the Royal Australian Navy, ordered in 1909, launched in 1911, and commissioned in 1913 as Australia's flagship. Displacing 18,500 tons at load and 22,130 at deep load, she measured 590 ft in length with a beam of 80 ft and carried 818 crew. Armed with eight 12-inch guns, sixteen 4-inch guns, and two 18-inch torpedo tubes, she could reach speeds of 25 knots powered by 44,000 shp turbines. During World War I, Australia initially secured German colonies in the Pacific, including Rabaul and Samoa, and pursued the German East Asia Squadron before it moved to South America. She then operated in the North Sea with the British Grand Fleet, missing the Battle of Jutland due to repairs after colliding with HMS New Zealand. Australia's post-war service included mutiny over leave and pay issues, followed by a role as a training ship until being placed in reserve in 1921. Under the Washington Naval Treaty, she was scuttled off Sydney Heads in 1924. Modifications during her service included anti-aircraft guns, improved fire control, and aircraft platforms on wing turrets. Her construction and deployment reflected Australia\u2019s commitment to a national navy and the broader British imperial defense strategy, making her the only capital ship of the RAN.\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/HMAS_Australia_1914.jpg/330px-HMAS_Australia_1914.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/HMASAustraliaOnDeliveryInUK1913.jpg/250px-HMASAustraliaOnDeliveryInUK1913.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/HMAS_Australia_sinking_AllanGreen.jpg/250px-HMAS_Australia_sinking_AllanGreen.jpg"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/HMAS_Australia_(1911)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1911",
+    "owner": "John Brown",
+    "port_of_registry": "",
+    "type": "Indefatigable-class battlecruiser",
+    "tonnage": "",
+    "draught": "9.2",
+    "length": "179.8",
+    "beam": "24.4",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
   }
 ]
