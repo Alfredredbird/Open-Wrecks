@@ -206,5 +206,44 @@
       "https://en.wikipedia.org/wiki/MV_Plassy"
     ],
     "submitted_by": "explorer"
+  },
+  {
+    "id": 13,
+    "title": "Old Barge",
+    "lat": 47.212331247279906,
+    "lng": 20.293401865363688,
+    "imo": 0,
+    "description": "Old sunken barge. Not much is known.",
+    "images": [
+      "https://preview.redd.it/some-old-ship-probably-a-barge-somewhere-in-hungary-v0-xvfdz2u3nvaf1.jpg?width=1080&crop=smart&auto=webp&s=71bc708657b756ffafd62eea1e9e8ea5a9751a7f",
+      "https://preview.redd.it/some-old-ship-probably-a-barge-somewhere-in-hungary-v0-3mt43804nvaf1.jpg?width=1080&crop=smart&auto=webp&s=9de2002fa806893b647b08e6f4b6cb66362e278f",
+      "https://preview.redd.it/some-old-ship-probably-a-barge-somewhere-in-hungary-v0-bwb6fy44nvaf1.jpg?width=1080&crop=smart&auto=webp&s=a0c576b581eec5a543d885f50800a2ac139350e0",
+      "https://preview.redd.it/some-old-ship-probably-a-barge-somewhere-in-hungary-v0-a2ttm594nvaf1.jpg?width=1080&crop=smart&auto=webp&s=bdf99f6aa7a46a7303c0ffb715901eac8108330e",
+      "https://preview.redd.it/some-old-ship-probably-a-barge-somewhere-in-hungary-v0-mw9zs8e4nvaf1.jpg?width=1080&crop=smart&auto=webp&s=ce876cd40914c42d9efa4c36640910f11d4ad996"
+    ],
+    "links": [
+      "https://www.reddit.com/r/Shipwrecks/comments/1lrlqcm/some_old_ship_probably_a_barge_somewhere_in/"
+    ],
+    "submitted_by": "explorer"
+  },
+  {
+    "id": 14,
+    "title": "MV Selendang Ayu",
+    "lat": 53.6395,
+    "lng": 167.1278,
+    "imo": 9145528,
+    "description": "# MV Selendang Ayu\n\n**Type:** Panamax bulk cargo ship  \n**Flag:** Malaysia  \n**IMO Number:** 9145528  \n**In Service:** 1998 \u2013 2004  \n**Fate:** Broke in two off Unalaska Island on 8 December 2004  \n**Coordinates of sinking:** 53.6395\u00b0N, 167.1278\u00b0W  \n\n## Final Voyage\n- Departed Seattle, Washington on 28 November 2004, bound for Xiamen, China.\n- Cargo: 60,200 tonnes of soybeans, 1,000 tonnes of fuel oil.\n- Engine failure occurred on 6 December, 46 miles NW of Bogoslof Island.\n- Attempts to repair the engine failed amid worsening weather.\n- Tugs attempted to tow the vessel but were unsuccessful due to high winds and waves.\n\n## Rescue\n- US Coast Guard helicopters evacuated most of the crew.\n- A rogue wave engulfed one HH-60J Jayhawk helicopter; six crew members died.\n- Remaining crew, including the master and a Coast Guard swimmer, were safely rescued.\n- Two rescuers were decorated for bravery.\n\n## Environmental Impact\n- Significant fuel onboard; 350,000 gallons (\u22481.3 million liters) of oil spilled.\n- Spill affected wildlife: 1,600+ birds and 6 sea otters recovered along the shore.\n- Considered one of Alaska\u2019s major oil spills since Exxon Valdez.\n\n## Notes\n- Engine failure caused by cracked cylinder liners and piston rings.\n- Weather conditions: winds up to 55 knots, waves up to 25 feet.\n- The ship ultimately broke in two after grounding.",
+    "images": [
+      "https://preview.redd.it/the-wreck-of-the-mv-selendang-ayu-2004-v0-nrkn3mmv6caf1.jpg?width=1080&crop=smart&auto=webp&s=1f34853f351a480ad36204157a11eea8edabd1a8",
+      "https://preview.redd.it/the-wreck-of-the-mv-selendang-ayu-2004-v0-tam4pkmv6caf1.jpg?width=640&crop=smart&auto=webp&s=4bda1cc5752dabe0791143eaaf712f0bc5ddaf7a",
+      "https://preview.redd.it/the-wreck-of-the-mv-selendang-ayu-2004-v0-986a2lmv6caf1.jpg?width=640&crop=smart&auto=webp&s=053104237bc0cae4daf93c0f4e89e0b7319148cf",
+      "https://preview.redd.it/the-wreck-of-the-mv-selendang-ayu-2004-v0-7m934lmv6caf1.jpg?width=640&crop=smart&auto=webp&s=4b4036ba1e3246d240b34191648100ebf5edaadc",
+      "https://preview.redd.it/the-wreck-of-the-mv-selendang-ayu-2004-v0-pi9aplmv6caf1.jpg?width=640&crop=smart&auto=webp&s=da6763fde0200f00ba8443df1b16fe75206142a7"
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/MV_Selendang_Ayu",
+      "https://www.reddit.com/r/Shipwrecks/comments/1lpf2d3/the_wreck_of_the_mv_selendang_ayu_2004/"
+    ],
+    "submitted_by": "explorer"
   }
 ]
