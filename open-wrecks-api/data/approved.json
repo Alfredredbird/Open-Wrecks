@@ -1450,5 +1450,31 @@
     "capacity": "",
     "crew": "",
     "builder": ""
+  },
+  {
+    "id": 79,
+    "title": "Edward Lombe",
+    "lat": -33.82908333333334,
+    "lng": 151.26985,
+    "imo": 0,
+    "description": "# Edward Lombe (1828)\n\n**Coordinates:** 33\u00b049.745\u2032S, 151\u00b016.191\u2032E  \n\nEdward Lombe was a three-masted merchant and passenger barque built in Whitby, England, in 1828. She made several voyages between London and Australia before being wrecked in 1834.\n\n---\n\n## Overview\n- **Builder:** Thomas Brodrick, Whitby  \n- **Launched:** 21 February 1828  \n- **Owner:** Robert Freeman (1833\u20131834)  \n- **Port of Registry:** London  \n- **Tonnage:** 347 tons (bm)  \n- **Length:** 106 ft (32.3 m)  \n- **Beam:** 27 ft 8 in (8.43 m)  \n- **Draught:** 19 ft 2 in (5.8 m)  \n- **Rig:** Ship-rigged, later barque  \n\n---\n\n## Career\n- **1828:** Entered Lloyd\u2019s Register under Freeman as master and owner.  \n- **1830:** Arrived at Fremantle from London carrying cargo and 22 passengers. Returned to London afterward.  \n- **1832:** Copper-sheathed.  \n- **1832\u20131833:** Under Whiteman Freeman, carried cargo, passengers, and five convicts from Hobart to Port Jackson. Returned to London with wool and passengers.  \n- **1834:** Under Stuart Stroyan, sailed from London to Hobart (arrived 31 July). Departed 17 August for Sydney.  \n\n---\n\n## Fate\n- **25 August 1834:** While entering Port Jackson during a gale, Edward Lombe was blown onto Middle Head and wrecked.  \n- **Casualties:** Captain, 4 crew, and 6 passengers perished (mostly swept overboard by heavy seas).  \n- **Survivors:** 16 crew and 2 passengers (including one woman) survived by clinging to the poop section until rescue at dawn.  \n\n---\n\n## Postscript\n- The disaster highlighted the dangers of Sydney Harbour\u2019s entrance and led to improvements in navigation safety.  \n- In **1836**, *Ann*, Australia\u2019s first lightship, was stationed at Sow and Pigs Reef, replacing an iron beacon from 1820.  \n- Between 1856 and 1877, *HMS Bramble* replaced *Ann* in this role.  \n\n---\n\n## References\n1. Hackman, Rowan. *Ships of the East India Company* (2001).  \n2. Lloyd\u2019s Register (1828), supple. pages \"E\", Seq.\u2116E21.  \n3. Nelson, Rob. *Passenger Ships arriving in Fremantle, Western Australia (1829\u20131889).*  \n4. Oz Ships arrival: *Edward Lombe*.  \n5. *Australian Shipping 1788\u20131968.*  \n6. *The Sydney Monitor* (9 July 1834).  \n7. *The Sydney Morning Herald* (25 August 1857).  \n\n---\n\n**Categories:**  \n- 1828 ships  \n- Ships built in Whitby  \n- Barques of Australia  \n- Shipwrecks of the Sydney Eastern Suburbs  \n- Maritime incidents in August 1834  \n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Edward_Lombe_(1828)"
+    ],
+    "submitted_by": "explorer",
+    "date": "",
+    "owner": "Robert Freeman",
+    "port_of_registry": "London",
+    "type": "",
+    "tonnage": "",
+    "draught": "5.8",
+    "length": "32.3",
+    "beam": "8.43",
+    "capacity": "",
+    "crew": "",
+    "builder": "Thomas Brodrick"
   }
 ]

@@ -15,13 +15,15 @@ import LoginWidget from "./components/LoginWidget";
 import SignupWidget from "./components/SignupWidget";
 import SubmitWidget from "./components/SubmitWidget";
 
+import useShips from "./hooks/useShips";
+import useAuth from "./hooks/useAuth";
+
 import { getDistance, getTotalDistance } from "./helpers/MathComponets";
 
 const API_BASE = `${window.location.protocol}//${window.location.hostname}:5000`;
 
 
 function App() {
-  const [ships, setShips] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [flyPosition, setFlyPosition] = useState(null);
   const [notification, setNotification] = useState("");
@@ -34,7 +36,7 @@ function App() {
   const [selectedMarkers, setSelectedMarkers] = useState([]);
   const [mapStyle, setMapStyle] = useState("osm"); // default
   const [userLocation, setUserLocation] = useState(null);
-
+  const ships = useShips(API_BASE);
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
@@ -74,8 +76,8 @@ function App() {
 
   const [message, setMessage] = useState("");
 
-  // Account info
-  const [account, setAccount] = useState(null);
+  const { account, logout, setAccount, validateSession } = useAuth(API_BASE);
+
 
   // Fetch ports whenever showPorts is toggled on
   useEffect(() => {
@@ -88,13 +90,7 @@ function App() {
     setPorts([]); // clear ports when hidden
   }
 }, [showPorts]);
-  // Fetch ships
-  useEffect(() => {
-    fetch(`${API_BASE}/api/ships`)
-      .then((res) => res.json())
-      .then((data) => setShips(data))
-      .catch((err) => console.error("Failed to fetch ships:", err));
-  }, []);
+  
   useEffect(() => {
   if (message) {
     const timer = setTimeout(() => setMessage(""), 5000); // hide after 5s
@@ -102,11 +98,6 @@ function App() {
   }
 }, [message]);
 
-  // Check cookies on load
-  useEffect(() => {
-    const session = Cookies.get("session");
-    if (session) validateSession(session);
-  }, []);
 
   useEffect(() => {
   // Get the ship ID from the URL
@@ -124,19 +115,7 @@ function App() {
   }
 }, [ships]);
   
-  const validateSession = (session) => {
-    fetch(`${API_BASE}/api/account`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ session }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.error) setAccount(data);
-        else Cookies.remove("session");
-      })
-      .catch(() => Cookies.remove("session"));
-  };
+  
 
   const filteredShips = ships.filter((ship) =>
     ship.title.toLowerCase().includes(searchTerm.toLowerCase())
