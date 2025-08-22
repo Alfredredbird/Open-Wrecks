@@ -1370,5 +1370,59 @@
     "capacity": "1.6 Mbbl",
     "crew": "44",
     "builder": "Astilleros Espa\u00f1oles"
+  },
+  {
+    "id": 76,
+    "title": "SS Charcot",
+    "lat": 47.44474302241676,
+    "lng": -53.205779812059504,
+    "imo": 0,
+    "description": "Not Much Is Known!",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://www.hiddennewfoundland.ca/ss-charcot"
+    ],
+    "submitted_by": "explorer",
+    "date": "",
+    "owner": "",
+    "port_of_registry": "",
+    "type": "",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
+  },
+  {
+    "id": 77,
+    "title": "Old Boat of Caol ",
+    "lat": 56.84077177567716,
+    "lng": -5.117069693632545,
+    "imo": 0,
+    "description": "Not Much Is Known!",
+    "images": [
+      "https://i0.wp.com/ellamckendrick.com/wp-content/uploads/2022/02/P1399469-1.jpg?resize=728%2C546&ssl=1",
+      "https://preview.redd.it/shipwreck-near-ben-nevis-v0-i7fvetiv1roe1.jpeg?width=1080&crop=smart&auto=webp&s=28eeddaf73e5f487fd920f19f90af0b58bfc31f1"
+    ],
+    "links": [
+      "https://ellamckendrick.com/the-corpach-shipwreck/",
+      "https://www.reddit.com/r/Shipwrecks/comments/1jbj0hb/shipwreck_near_ben_nevis/"
+    ],
+    "submitted_by": "explorer",
+    "date": "",
+    "owner": "",
+    "port_of_registry": "",
+    "type": "",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
   }
 ]
