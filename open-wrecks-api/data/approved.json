@@ -1476,5 +1476,57 @@
     "capacity": "",
     "crew": "",
     "builder": "Thomas Brodrick"
+  },
+  {
+    "id": 80,
+    "title": "Hawkesbury Packet",
+    "lat": 34.6244,
+    "lng": 150.8624,
+    "imo": 0,
+    "description": "# Hawkesbury Packet (1811)\n\n**Coordinates:** 34.6244\u00b0S, 150.8624\u00b0E  \n\nHawkesbury Packet was a 21-ton sloop built in 1811 for Solomon Wiseman, a former convict who became a wealthy colonial landholder. The vessel operated as a coastal trader until it was wrecked in 1817.\n\n---\n\n## Overview\n- **Type:** Sloop  \n- **Launched:** 1811  \n- **Owner:** Solomon Wiseman  \n- **Tonnage:** 21 tons (bm)  \n- **Fate:** Wrecked, August 1817  \n\n---\n\n## Career\n- **1811:** Constructed in New South Wales for coastal trading.  \n- **1816 Incident:**  \n  - On 24 May 1816, sailed from Sydney to Newcastle.  \n  - A gale forced the vessel into Port Stephens on 20 June 1816.  \n  - Supplies dwindled, and two crew (George Yates and Nicholas Thompson) attempted to reach Newcastle with an Aboriginal guide.  \n  - They were robbed of their clothes by a tribe; Thompson died from exposure and hunger, while Yates survived by crawling the last miles to Newcastle.  \n  - Rescue supplies were sent, and the ship was found driven ashore but later refloated and returned to Sydney (around 15 August 1816).  \n\n---\n\n## Fate\n- **14 August 1817:** Departed Sydney for the Shoalhaven under Captain T. Walker to collect cedar.  \n- **August 1817 (exact date unknown):** Ran aground at Minnamurra, near Kiama, New South Wales.  \n- **Result:** Totally wrecked.  \n\n---\n\n## References\n- Bateson, Charles (1972). *Australian Shipwrecks (Vol.1) 1622\u20131850*. Sydney: A.H. & A.W. Reed. ISBN 0-589-07112-2.  \n\n---\n\n**Categories:**  \n- 1811 ships  \n- Sloops of Australia  \n- Ships built in New South Wales  \n- Coastal trading vessels of Australia  \n- Shipwrecks of the Illawarra Region  \n- Maritime incidents in 1817  \n- 1788\u20131850 ships of Australia  \n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Hawkesbury_Packet"
+    ],
+    "submitted_by": "explorer",
+    "date": "",
+    "owner": "",
+    "port_of_registry": "",
+    "type": "Sloop",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
+  },
+  {
+    "id": 81,
+    "title": "Hazard",
+    "lat": 33.54227,
+    "lng": 151.3485,
+    "imo": 0,
+    "description": "# Hazard (1800)\n\n**Coordinates:** 33.54227\u00b0S, 151.3485\u00b0E  \n\nHazard was an Australian sloop, probably built in Sydney around 1800. She was wrecked in 1809 near Box Head, New South Wales.\n\n---\n\n## Overview\n- **Type:** Sloop  \n- **Launched:** c.1800 (Sydney, NSW)  \n- **Owner:** Thorley & Griffiths  \n- **Chartered to:** Andrew Lusk  \n- **Tonnage:** Unknown  \n- **Fate:** Wrecked in 1809 near Box Head  \n\n---\n\n## Wreck Incident (1809)\n- **March 1809:** Hazard sailed from Pittwater, NSW, with *Argument* and *Experiment*, bound for Sydney carrying wheat.  \n- A squall struck, driving Hazard onto **Box Head**, about 2 miles (3.2 km) north of Barrenjoey.  \n- **Master:** Andrew Lusk  \n  - Escaped in the ship\u2019s boat but could not persuade his young crew member to join.  \n- **Crew:**  \n  - The boy was washed overboard but rescued by local Aborigines.  \n  - Lusk\u2019s boat capsized before reaching shore, and he drowned.  \n\n---\n\n## References\n- Bateson, Charles (1972). *Australian Shipwrecks, Vol. 1: 1622\u20131850*. Sydney: A.H. & A.W. Reed. ISBN 0-589-07112-2. p.45  \n\n---\n\n**Categories:**  \n- 1800s ships  \n- Sloops of Australia  \n- Ships built in New South Wales  \n- Coastal trading vessels of Australia  \n- Shipwrecks of the Central Coast Region  \n- Maritime incidents in 1809  \n- 1788\u20131850 ships of Australia  \n",
+    "images": [
+      ""
+    ],
+    "links": [
+      "https://en.wikipedia.org/wiki/Hazard_(ship)"
+    ],
+    "submitted_by": "explorer",
+    "date": "1809",
+    "owner": "Thorley & Griffiths ",
+    "port_of_registry": "",
+    "type": "Sloop",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
   }
 ]
