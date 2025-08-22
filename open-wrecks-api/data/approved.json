@@ -1424,5 +1424,31 @@
     "capacity": "",
     "crew": "",
     "builder": ""
+  },
+  {
+    "id": 78,
+    "title": "Grumman albatross",
+    "lat": 12.02138888888889,
+    "lng": 119.98611111111111,
+    "imo": 0,
+    "description": "This is a plane lol",
+    "images": [
+      "https://preview.redd.it/not-a-normal-boat-but-a-flying-boat-a-grumman-albatross-v0-u4z3b2v16rne1.png?width=640&crop=smart&auto=webp&s=e36e801665444243fd6ff2c4722337b6a1da332d"
+    ],
+    "links": [
+      "https://www.reddit.com/r/Shipwrecks/comments/1j7lh1p/not_a_normal_boat_but_a_flying_boat_a_grumman/"
+    ],
+    "submitted_by": "explorer",
+    "date": "",
+    "owner": "",
+    "port_of_registry": "",
+    "type": "",
+    "tonnage": "",
+    "draught": "",
+    "length": "",
+    "beam": "",
+    "capacity": "",
+    "crew": "",
+    "builder": ""
   }
 ]
