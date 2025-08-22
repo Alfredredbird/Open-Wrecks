@@ -273,6 +273,8 @@ const handleContactSupport = () => {
       <div className="app-container">
         {/* Sidebar */}
         <div className="sidebar">
+           <div className="sidebar-inner">
+            </div>
           <h2>Latest Ships</h2>
           {[...filteredShips]
   .sort((a, b) => b.id - a.id) // sort descending by ID
