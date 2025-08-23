@@ -621,3 +621,41 @@
 .right-sidebar:not(:hover) .widget {
   justify-content: center;
 }
+.sidebar h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+  padding-left: 8px;
+  border-left: 4px solid #1976d2; /* blue stripe */
+  color: #1976d2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.news-section h2,
+.sidebar h2,
+.admin-section h3,
+.admin-section h2 {
+  font-size: 36px;          /* slightly bigger */
+  font-weight: 900;         /* bolder for more emphasis */
+  margin: 20px 0 15px 0;
+  color: #1976d2;           /* primary blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;      /* slightly more spacing for impact */
+  text-align: center;
+  border-left: none;
+
+  /* subtle text shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+.news-section h2::after,
+.sidebar h2::after,
+.admin-section h3::after,
+.admin-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1976d2;
+  margin: 8px auto 0 auto; 
+  border-radius: 2px;
+}

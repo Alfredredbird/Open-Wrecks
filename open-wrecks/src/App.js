@@ -426,17 +426,22 @@ const handleContactSupport = () => {
             </div>
           )}
            {/* ADMIN BUTTON */}
-          {account?.admin && (
-            <button
-              style={{ marginTop: "20px", background: "darkred", color: "white" }}
-              onClick={() => {
-                fetchPending();
-                setShowPending(true);
-              }}
-            >
-              Review Pending Ships
-            </button>
-          )}
+           {account?.admin && (
+    <div className="admin-section">
+      <h2>Admin</h2>
+      <div
+        className="widget"
+        onClick={() => {
+          fetchPending();
+          setShowPending(true);
+        }}
+      >
+        <img src="/boat.png" alt="Admin" className="widget-icon" />
+        <h4>Review Pending Ships</h4>
+        <p>Approve or reject newly submitted ships</p>
+      </div>
+    </div>
+  )}
         </div>
 
         {/* Map */}
