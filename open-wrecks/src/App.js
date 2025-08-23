@@ -616,9 +616,9 @@ const handleContactSupport = () => {
           
 {account && (
   <div className="bottom-left-buttons">
-    <button onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
-    <button onClick={() => setShowProfileCard(!showProfileCard)}>Profile</button>
-    <button onClick={handleLogout}>Logout</button>
+    <button className="buttons" onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
+    <button className="buttons" onClick={() => setShowProfileCard(!showProfileCard)}>Profile</button>
+    <button className="buttons logout" onClick={handleLogout}>Logout</button>
 
     {/* Profile Card */}
     {showProfileCard && (

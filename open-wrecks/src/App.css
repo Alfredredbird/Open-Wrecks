@@ -671,3 +671,24 @@
 .sidebar-carousel .carousel-indicator {
   display: none;
 }
+.buttons button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  background-color: #1976d2; /* primary blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #145ca1; /* darker blue on hover */
+  transform: translateY(-2px);
+}
