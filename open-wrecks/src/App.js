@@ -379,15 +379,15 @@ const handleContactSupport = () => {
         <div className="sidebar">
           {/* Welcome Widget */}
   {account && (
-    <div className="welcome-widget">
-      <Widget
-  title={`Welcome ${account.username}!`}
-  description=""
-  severity="warning"
-/>
+  <div className="welcome-widget">
+    <Widget
+      title={`Welcome ${account.username}!`}
+      description=""
+      severity="warning"
+    />
+  </div>
+)}
 
-    </div>
-  )}
           <SidebarCarousel
     ships={[...filteredShips].sort((a, b) => b.id - a.id).slice(0, 6)}
     onShipClick={handleShipClick}

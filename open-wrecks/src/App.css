@@ -591,6 +591,9 @@
   transition: transform 0.2s;
 
   margin-bottom: 12px; 
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInWidget 0.7s forwards;
 }
 
 
@@ -695,3 +698,31 @@
   background-color: #145ca1; /* darker blue on hover */
   transform: translateY(-2px);
 }
+
+/* animations */
+.welcome-widget {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInWidget {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: stagger animations for multiple widgets */
+.admin-section .widget:nth-child(1) { animation-delay: 0.1s; }
+.admin-section .widget:nth-child(2) { animation-delay: 0.2s; }
+.admin-section .widget:nth-child(3) { animation-delay: 0.3s; }
+.admin-section .widget:nth-child(4) { animation-delay: 0.4s; }
+.admin-section .widget:nth-child(5) { animation-delay: 0.5s; }
+.admin-section .widget:nth-child(6) { animation-delay: 0.7s; }
