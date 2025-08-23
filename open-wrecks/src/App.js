@@ -269,19 +269,71 @@ const handleContactSupport = () => {
       {message && <div className="notification">{message}</div>}
 
       {/* Topbar */}
-      <div className="topbar">
-        <h1>Open-Wrecks</h1>
-         <span className="ship-counter">Logged Ships: {ships.length}</span>
-        <input
-          type="text"
-          placeholder="Search ships..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-bar"
-        />
-        
-        
+<div className="topbar">
+  <h1>Open-Wrecks</h1>
+  <span className="ship-counter">Logged Ships: {ships.length}</span>
+  <div className="search-container" style={{ position: "relative" }}>
+    <input
+      type="text"
+      placeholder="Search ships..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="search-bar"
+    />
+    
+    {searchTerm && filteredShips.length > 0 && (
+  <div className="search-dropdown" style={{
+    position: "absolute",
+    top: "40px",
+    left: 0,
+    right: 0,
+    background: "white",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    zIndex: 1000,
+    maxHeight: "200px",
+    overflowY: "auto"
+  }}>
+    {filteredShips.slice(0, 3).map((ship) => (
+      <div
+        key={ship.id}
+        className="search-result"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          padding: "10px",
+          cursor: "pointer",
+          borderBottom: "1px solid #eee",
+        }}
+        onClick={() => {
+          handleShipClick(ship);
+          setSearchTerm(""); // optional: clear search
+        }}
+      >
+        {ship.images && ship.images[0] && (
+          <img
+            src={ship.images[0]}
+            alt={ship.title}
+            style={{
+              width: "40px",
+              height: "40px",
+              objectFit: "cover",
+              marginRight: "10px",
+              borderRadius: "3px"
+            }}
+          />
+        )}
+        <span style={{
+             color: "black"
+            }}>{ship.title}</span>
       </div>
+    ))}
+  </div>
+)}
+
+  </div>
+</div>
+
 
       <div className="app-container">
 {/* Right Sidebar */}
@@ -388,10 +440,11 @@ const handleContactSupport = () => {
   </div>
 )}
 
-          <SidebarCarousel
-    ships={[...filteredShips].sort((a, b) => b.id - a.id).slice(0, 6)}
-    onShipClick={handleShipClick}
-  />
+        <SidebarCarousel
+  ships={[...ships].sort((a, b) => b.id - a.id).slice(0, 6)}
+  onShipClick={handleShipClick}
+/>
+
          {/* News Section */}
 <div className="news-section">
   <h2>Latest News</h2>

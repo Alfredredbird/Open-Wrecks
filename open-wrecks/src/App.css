@@ -17,7 +17,8 @@
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  width: 200px;
+  width: 220px; 
+  margin-left: 10; 
 }
 
 /* Layout */
@@ -726,3 +727,4 @@
 .admin-section .widget:nth-child(4) { animation-delay: 0.4s; }
 .admin-section .widget:nth-child(5) { animation-delay: 0.5s; }
 .admin-section .widget:nth-child(6) { animation-delay: 0.7s; }
+
