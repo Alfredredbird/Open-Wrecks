@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 
 function SidebarCarousel({ ships, onShipClick }) {
-  // Filter down to latest 6 ships with a valid first image
   const shipsWithImages = (ships || [])
-    .filter((s) => s.images && s.images[0]) // ensures first image is truthy
+    .filter((s) => s.images && s.images[0])
     .slice(0, 6);
 
   const [index, setIndex] = useState(0);
@@ -14,7 +13,7 @@ function SidebarCarousel({ ships, onShipClick }) {
 
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % shipsWithImages.length);
-    }, 4000); // change every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [shipsWithImages.length]);
@@ -26,17 +25,32 @@ function SidebarCarousel({ ships, onShipClick }) {
   return (
     <div className="sidebar-carousel">
       <h2>Latest Ships</h2>
+
       <div
-        className="carousel-item"
+        className="widget"
         onClick={() => onShipClick(ship)}
+        style={{
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "10px",
+        }}
       >
-        <h3>{ship.title}</h3>
+        <h4 style={{ marginBottom: "6px" }}>{ship.title}</h4>
+        <div className="widget-divider"></div> {/* separator line */}
         <img
           src={ship.images[0]}
           alt={ship.title}
-          className="carousel-img"
+          style={{
+            width: "100%",
+            height: "auto",
+            maxHeight: "300px",
+            objectFit: "cover",
+            borderRadius: "6px",
+            marginTop: "6px",
+          }}
         />
       </div>
+
       <div className="carousel-indicator">
         {index + 1}/{shipsWithImages.length}
       </div>
