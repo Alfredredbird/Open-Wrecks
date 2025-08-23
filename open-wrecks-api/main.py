@@ -10,6 +10,9 @@ PENDING_FILE = "data/pending.json"
 APPROVED_FILE = "data/approved.json"
 ACCOUNT_FILE = "data/users.json"
 JUNKYARD_FILE = "data/junkyards.json"
+NEWS_FILE = "data/news.json"
+
+
 
 
 CORS(app)
@@ -382,6 +385,21 @@ def get_yards():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Ensure news file exists
+if not os.path.exists(NEWS_FILE):
+    with open(NEWS_FILE, "w") as f:
+        json.dump([], f)
+
+@app.route("/api/news", methods=["GET"])
+def get_news():
+    try:
+        with open(NEWS_FILE, "r") as f:
+            news_data = json.load(f)
+        # Optional: sort news by date descending
+        news_data.sort(key=lambda x: x.get("date", ""), reverse=True)
+        return jsonify(news_data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

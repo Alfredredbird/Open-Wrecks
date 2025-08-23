@@ -14,6 +14,7 @@ import ImageCarousel from "./components/ImageCarousel";
 import LoginWidget from "./components/LoginWidget";
 import SignupWidget from "./components/SignupWidget";
 import SubmitWidget from "./components/SubmitWidget";
+import SidebarCarousel from "./components/SidebarCarousel";
 
 import useShips from "./hooks/useShips";
 import useAuth from "./hooks/useAuth";
@@ -37,6 +38,7 @@ function App() {
   const [mapStyle, setMapStyle] = useState("osm"); // default
   const [userLocation, setUserLocation] = useState(null);
   const ships = useShips(API_BASE);
+  const [news, setNews] = useState([]);
   // Widgets
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
@@ -77,6 +79,16 @@ function App() {
   const [message, setMessage] = useState("");
 
   const { account, logout, setAccount, validateSession } = useAuth(API_BASE);
+
+  // Fetch news on mount
+  useEffect(() => {
+    fetch(`${API_BASE}/api/news`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) setNews(data.slice(0, 5)); // latest 5 news items
+      })
+      .catch(err => console.error("Failed to fetch news:", err));
+  }, []);
 
 
   // Fetch ports whenever showPorts is toggled on
@@ -273,29 +285,35 @@ const handleContactSupport = () => {
       <div className="app-container">
         {/* Sidebar */}
         <div className="sidebar">
-           <div className="sidebar-inner">
-            </div>
-          <h2>Latest Ships</h2>
-          {[...filteredShips]
-  .sort((a, b) => b.id - a.id) // sort descending by ID
-  .slice(0, 6) // take top 6
-  .map((ship) => (
-    <div
-      key={ship.id}
-      className="ship-widget"
-      onClick={() => handleShipClick(ship)}
-    >
-      <h3>{ship.title}</h3>
-      {ship.images && ship.images[0] && (
-        <img
-          src={ship.images[0]}
-          alt={ship.title}
-          className="ship-widget-img"
-        />
+          <SidebarCarousel
+    ships={[...filteredShips].sort((a, b) => b.id - a.id).slice(0, 6)}
+    onShipClick={handleShipClick}
+  />
+         {/* News Section */}
+<div className="news-section">
+  <h2>Latest News</h2>
+  {news.length === 0 && <p>No news available</p>}
+  {news.slice(0, 3).map((item, i) => (
+    <div key={i} className={`news-card news-${item.severity}`}>
+      {item.image && item.image.trim() !== "" && (
+        <img src={item.image} alt={item.title} className="news-img" />
       )}
+      <div className="news-content">
+        <h4>{item.title}</h4>
+        <p className="news-date">{item.date}</p>
+        {item.summary && <p>{item.summary}</p>}
+        {item.link && (
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            Read more
+          </a>
+        )}
+        <span className={`news-severity news-${item.severity}`}>
+          {item.severity.toUpperCase()}
+        </span>
+      </div>
     </div>
-))}
-
+  ))}
+</div>
 
           {!account && (
             <div className="buttons">
