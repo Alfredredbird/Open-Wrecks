@@ -283,6 +283,97 @@ const handleContactSupport = () => {
       </div>
 
       <div className="app-container">
+{/* Right Sidebar */}
+<div className="right-sidebar">
+  <h3>Map Tools</h3>
+
+  {/* Ports */}
+  <div className="widget" onClick={() => setShowPorts(!showPorts)}>
+    <img src="/boat.png" alt="Boat" className="widget-icon" />
+    <h4>{showPorts ? "Hide Ports" : "Show Ports"}</h4>
+    <p>Toggle port markers on map</p>
+  </div>
+
+  {/* Ship Recycle Centers */}
+  <div className="widget" onClick={() => alert("Show Ship Recycle Centers triggered")}>
+    <img src="/recycle.png" alt="Recycle" className="widget-icon" />
+    <h4>Show Ship Recycle Centers</h4>
+    <p>Display ship recycle centers</p>
+  </div>
+
+  {/* Lighthouses */}
+  <div className="widget" onClick={() => alert("Show Light Houses triggered")}>
+    <img src="/lighthouse.png" alt="Lighthouse" className="widget-icon" />
+    <h4>Show Light Houses</h4>
+    <p>Display lighthouses on map</p>
+  </div>
+
+  {/* Ship Viewer */}
+  <div className="widget" onClick={() => (window.location.href = "/viewer")}>
+    <img src="/viewer.png" alt="Viewer" className="widget-icon" />
+    <h4>Ship Wreck Viewer</h4>
+    <p>Go to viewer page</p>
+  </div>
+
+  <hr />
+
+  <h3>Map Options</h3>
+
+  {/* Show/Hide Markers */}
+  <div className="widget" onClick={() => setShowMarkers(!showMarkers)}>
+    <img src="/marker.png" alt="Markers" className="widget-icon" />
+    <h4>{showMarkers ? "Hide Markers" : "Show Markers"}</h4>
+    <p>Toggle all ship markers</p>
+  </div>
+
+  {/* Show My Location */}
+  <div className="widget" onClick={requestUserLocation}>
+    <img src="/location.png" alt="Location" className="widget-icon" />
+    <h4>Show My Location</h4>
+    <p>Fly to your current location</p>
+  </div>
+
+  {/* Show/Hide Coordinates */}
+  <div className="widget" onClick={() => setShowCoordinates(!showCoordinates)}>
+    <img src="/coordinates.png" alt="Coordinates" className="widget-icon" />
+    <h4>{showCoordinates ? "Hide Coordinates" : "Show Coordinates"}</h4>
+    <p>Display coordinates on markers</p>
+  </div>
+
+  {/* Measure Mode */}
+  <div className="widget" onClick={() => { setMeasureMode(!measureMode); setSelectedMarkers([]); }}>
+    <img src="/ruler.png" alt="Measure" className="widget-icon" />
+    <h4>{measureMode ? "Disable Measure" : "Enable Measure"}</h4>
+    <p>Measure distance between points</p>
+  </div>
+
+  {/* Clear Measurements */}
+  {measureMode && (
+    <div className="widget" onClick={() => setSelectedMarkers([])}>
+      <img src="/clear.png" alt="Clear" className="widget-icon" />
+      <h4>Clear Measurements</h4>
+      <p>Reset measured points</p>
+    </div>
+  )}
+
+  {/* Map Style */}
+  <div className="widget">
+    <img src="/map.png" alt="Map Style" className="widget-icon" />
+    <h4>Map Style</h4>
+    <select
+      value={mapStyle}
+      onChange={(e) => setMapStyle(e.target.value)}
+      style={{ width: "100%", marginTop: "5px" }}
+    >
+      {Object.keys(mapStyles).map((key) => (
+        <option key={key} value={key}>{mapStyles[key].name}</option>
+      ))}
+    </select>
+    <p>Change map tile style</p>
+  </div>
+</div>
+
+
         {/* Sidebar */}
         <div className="sidebar">
           <SidebarCarousel
