@@ -1,0 +1,77 @@
+/* Widget styling - similar to news cards */
+.widget-card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  
+  .widget-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .widget-header h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .widget-divider {
+    height: 3px;
+    background-color: #1976d2;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+  
+  .widget-description {
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .widget-links a {
+    display: block;
+    font-weight: bold;
+    color: #1976d2;
+    text-decoration: underline;
+    margin-bottom: 4px;
+  }
+  
+  .widget-links a:hover {
+    color: #145ca1;
+  }
+  
+  /* Severity */
+  .widget-severity {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .widget-info { background-color: #2196f3; color: white; }
+  .widget-warning { background-color: #ff9800; color: white; }
+  .widget-error { background-color: #f44336; color: white; }
+  .severity-low {
+    color: green;
+  }
+  
+  .severity-medium {
+    color: orange;
+  }
+  
+  .severity-high {
+    color: red;
+  }
+  

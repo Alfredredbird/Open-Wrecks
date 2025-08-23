@@ -15,6 +15,7 @@ import LoginWidget from "./components/LoginWidget";
 import SignupWidget from "./components/SignupWidget";
 import SubmitWidget from "./components/SubmitWidget";
 import SidebarCarousel from "./components/SidebarCarousel";
+import Widget from "./components/Widget"
 
 import useShips from "./hooks/useShips";
 import useAuth from "./hooks/useAuth";
@@ -296,21 +297,21 @@ const handleContactSupport = () => {
 
   {/* Ship Recycle Centers */}
   <div className="widget" onClick={() => alert("Show Ship Recycle Centers triggered")}>
-    <img src="/recycle.png" alt="Recycle" className="widget-icon" />
+    <img src="/boat.png" alt="Recycle" className="widget-icon" />
     <h4>Show Ship Recycle Centers</h4>
     <p>Display ship recycle centers</p>
   </div>
 
   {/* Lighthouses */}
   <div className="widget" onClick={() => alert("Show Light Houses triggered")}>
-    <img src="/lighthouse.png" alt="Lighthouse" className="widget-icon" />
+    <img src="/boat.png" alt="Lighthouse" className="widget-icon" />
     <h4>Show Light Houses</h4>
     <p>Display lighthouses on map</p>
   </div>
 
   {/* Ship Viewer */}
   <div className="widget" onClick={() => (window.location.href = "/viewer")}>
-    <img src="/viewer.png" alt="Viewer" className="widget-icon" />
+    <img src="/boat.png" alt="Viewer" className="widget-icon" />
     <h4>Ship Wreck Viewer</h4>
     <p>Go to viewer page</p>
   </div>
@@ -321,28 +322,28 @@ const handleContactSupport = () => {
 
   {/* Show/Hide Markers */}
   <div className="widget" onClick={() => setShowMarkers(!showMarkers)}>
-    <img src="/marker.png" alt="Markers" className="widget-icon" />
+    <img src="/boat.png" alt="Markers" className="widget-icon" />
     <h4>{showMarkers ? "Hide Markers" : "Show Markers"}</h4>
     <p>Toggle all ship markers</p>
   </div>
 
   {/* Show My Location */}
   <div className="widget" onClick={requestUserLocation}>
-    <img src="/location.png" alt="Location" className="widget-icon" />
+    <img src="/boat.png" alt="Location" className="widget-icon" />
     <h4>Show My Location</h4>
     <p>Fly to your current location</p>
   </div>
 
   {/* Show/Hide Coordinates */}
   <div className="widget" onClick={() => setShowCoordinates(!showCoordinates)}>
-    <img src="/coordinates.png" alt="Coordinates" className="widget-icon" />
+    <img src="/boat.png" alt="Coordinates" className="widget-icon" />
     <h4>{showCoordinates ? "Hide Coordinates" : "Show Coordinates"}</h4>
     <p>Display coordinates on markers</p>
   </div>
 
   {/* Measure Mode */}
   <div className="widget" onClick={() => { setMeasureMode(!measureMode); setSelectedMarkers([]); }}>
-    <img src="/ruler.png" alt="Measure" className="widget-icon" />
+    <img src="/boat.png" alt="Measure" className="widget-icon" />
     <h4>{measureMode ? "Disable Measure" : "Enable Measure"}</h4>
     <p>Measure distance between points</p>
   </div>
@@ -350,7 +351,7 @@ const handleContactSupport = () => {
   {/* Clear Measurements */}
   {measureMode && (
     <div className="widget" onClick={() => setSelectedMarkers([])}>
-      <img src="/clear.png" alt="Clear" className="widget-icon" />
+      <img src="/boat.png" alt="Clear" className="widget-icon" />
       <h4>Clear Measurements</h4>
       <p>Reset measured points</p>
     </div>
@@ -358,7 +359,7 @@ const handleContactSupport = () => {
 
   {/* Map Style */}
   <div className="widget">
-    <img src="/map.png" alt="Map Style" className="widget-icon" />
+    <img src="/boat.png" alt="Map Style" className="widget-icon" />
     <h4>Map Style</h4>
     <select
       value={mapStyle}
@@ -376,6 +377,17 @@ const handleContactSupport = () => {
 
         {/* Sidebar */}
         <div className="sidebar">
+          {/* Welcome Widget */}
+  {account && (
+    <div className="welcome-widget">
+      <Widget
+  title={`Welcome ${account.username}!`}
+  description=""
+  severity="warning"
+/>
+
+    </div>
+  )}
           <SidebarCarousel
     ships={[...filteredShips].sort((a, b) => b.id - a.id).slice(0, 6)}
     onShipClick={handleShipClick}
@@ -596,18 +608,10 @@ const handleContactSupport = () => {
 )}
 
           </MapContainer>
-          {account && (
-  <div className="bottom-left-buttons">
-    <span>Welcome {account.username}</span>
-     <button onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
-    <button onClick={handleLogout}>Logout</button>
-  </div>
-)}
+          
 {account && (
   <div className="bottom-left-buttons">
-    <span>Welcome {account.username}</span>
     <button onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
-    <button onClick={() => setShowOptions(!showOptions)}>Options</button> 
     <button onClick={() => setShowProfileCard(!showProfileCard)}>Profile</button>
     <button onClick={handleLogout}>Logout</button>
 
@@ -619,45 +623,6 @@ const handleContactSupport = () => {
         <button onClick={handleContactSupport}>Contact Support</button>
       </div>
     )}
-    {/* Options Sidebar */}
-{showOptions && (
-  <div className="options-sidebar">
-    <h3>Options</h3>
-    <button onClick={() => setShowPorts(!showPorts)}>
-      {showPorts ? "Hide Junk Yards" : "Show Junk Yards"}
-    </button>
-    <button onClick={() => setShowCoordinates(!showCoordinates)}>
-      {showCoordinates ? "Hide Coordinates" : "Show Coordinates"}
-    </button>
-      <button onClick={requestUserLocation}>
-  Show My Location
-</button>
-
-    <button onClick={() => setShowMarkers(!showMarkers)}>
-      {showMarkers ? "Hide Markers" : "Show Markers"}
-    </button>
-     <button onClick={() => {
-      setMeasureMode(!measureMode);
-      setSelectedMarkers([]); 
-    }}>
-      {measureMode ? "Disable Measure" : "Enable Measure"}
-    </button>
-
-    {/* Clear Measurements button */}
-    {measureMode && (
-      <button onClick={() => setSelectedMarkers([])}>
-        Clear Measurements
-      </button>
-    )}
-  <h4>Map Style</h4>
-<select value={mapStyle} onChange={(e) => setMapStyle(e.target.value)}>
-  {Object.keys(mapStyles).map((key) => (
-    <option key={key} value={key}>{mapStyles[key].name}</option>
-  ))}
-</select>
-
-  </div>
-)}
   </div>
 )}
 
