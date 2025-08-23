@@ -294,26 +294,27 @@ const handleContactSupport = () => {
   <h2>Latest News</h2>
   {news.length === 0 && <p>No news available</p>}
   {news.slice(0, 3).map((item, i) => (
-    <div key={i} className={`news-card news-${item.severity}`}>
-      {item.image && item.image.trim() !== "" && (
-        <img src={item.image} alt={item.title} className="news-img" />
-      )}
-      <div className="news-content">
+    <div key={i} className="news-card">
+      <div className="news-header">
         <h4>{item.title}</h4>
-        <p className="news-date">{item.date}</p>
-        {item.summary && <p>{item.summary}</p>}
-        {item.link && (
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
-            Read more
-          </a>
-        )}
         <span className={`news-severity news-${item.severity}`}>
           {item.severity.toUpperCase()}
         </span>
       </div>
+      <div className="news-divider"></div>
+      {item.image && item.image.trim() !== "" && (
+        <img src={item.image} alt={item.title} className="news-img" />
+      )}
+      {item.summary && <p className="news-summary">{item.summary}</p>}
+      {item.link && (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
+          Read more
+        </a>
+      )}
     </div>
   ))}
 </div>
+
 
           {!account && (
             <div className="buttons">

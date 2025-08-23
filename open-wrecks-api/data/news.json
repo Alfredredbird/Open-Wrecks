@@ -14,5 +14,69 @@
     "link": "",
     "date": "2025-08-21",
     "severity": "warning"
+  },
+  {
+    "title": "Critical database update",
+    "summary": "Database servers will be updated tonight, expect brief downtime.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-20",
+    "severity": "error"
+  },
+  {
+    "title": "New exploration vessel",
+    "summary": "A new vessel has been added for Arctic exploration.",
+    "image": "https://via.placeholder.com/300x150.png?text=Ship+Image",
+    "link": "https://example.com/vessel-info",
+    "date": "2025-08-19",
+    "severity": "info"
+  },
+  {
+    "title": "Map update released",
+    "summary": "Updated maps now show more detailed wreck locations.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-18",
+    "severity": "info"
+  },
+  {
+    "title": "Temporary API slowdown",
+    "summary": "Some API endpoints may respond slower due to maintenance.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-17",
+    "severity": "warning"
+  },
+  {
+    "title": "Security patch applied",
+    "summary": "Critical security patch successfully applied to the backend.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-16",
+    "severity": "info"
+  },
+  {
+    "title": "Unexpected outage",
+    "summary": "Server went offline unexpectedly, recovery in progress.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-15",
+    "severity": "error"
+  },
+  {
+    "title": "New tutorial added",
+    "summary": "Learn how to submit shipwrecks properly using our new guide.",
+    "image": "https://via.placeholder.com/300x150.png?text=Tutorial",
+    "link": "https://example.com/tutorial",
+    "date": "2025-08-14",
+    "severity": "info"
+  },
+  {
+    "title": "Upcoming features",
+    "summary": "Preview of upcoming map features and tools for shipwreck tracking.",
+    "image": "",
+    "link": "",
+    "date": "2025-08-13",
+    "severity": "warning"
   }
 ]
