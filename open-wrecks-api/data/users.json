@@ -6,7 +6,16 @@
     "name": "explorer",
     "country": "US",
     "id": 1,
-    "session": "b47e1896-7222-47f2-b5e6-b4c25a5ea740",
+    "session": "a315a35b-6931-4486-8ce3-88fe3a8e81e3",
     "admin": true
+  },
+  {
+    "username": "alfredredbird",
+    "password": "12345",
+    "email": "alfreed@mail.co",
+    "name": "23",
+    "country": "US",
+    "id": 2,
+    "session": "45cecec2-4ce3-4da5-9da3-b2b6e5d5128d"
   }
 ]

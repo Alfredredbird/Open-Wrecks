@@ -419,30 +419,58 @@ const handleContactSupport = () => {
 </div>
 
 
-          {!account && (
-            <div className="buttons">
-              <button onClick={() => setShowLogin(true)}>Login</button>
-              <button onClick={() => setShowSignup(true)}>Signup</button>
-            </div>
-          )}
-           {/* ADMIN BUTTON */}
-           {account?.admin && (
-    <div className="admin-section">
-      <h2>Admin</h2>
-      <div
-        className="widget"
-        onClick={() => {
-          fetchPending();
-          setShowPending(true);
-        }}
-      >
-        <img src="/boat.png" alt="Admin" className="widget-icon" />
-        <h4>Review Pending Ships</h4>
-        <p>Approve or reject newly submitted ships</p>
-      </div>
+ {!account && (
+    <div className="buttons">
+      <button onClick={() => setShowLogin(true)}>Login</button>
+      <button onClick={() => setShowSignup(true)}>Signup</button>
     </div>
   )}
-        </div>
+
+  {/* Admin Section */}
+  {account && (
+    <div className="admin-section">
+      <h2>Account</h2>
+
+      {/* Profile widget for all logged-in users */}
+      <div className="widget" onClick={() => setShowProfileCard(!showProfileCard)}>
+        <img src="/boat.png" alt="Profile" className="widget-icon" />
+        <h4>Profile</h4>
+        <p>View your profile information</p>
+      </div>
+      <div className="widget" onClick={() => alert("Favorites clicked")}>
+            <img src="/boat.png" alt="Favorites" className="widget-icon" />
+            <h4>Favorites</h4>
+            <p>View favorite ships</p>
+          </div>
+      {/* Submit Shipwreck */}
+    <div className="widget" onClick={() => setShowSubmit(true)}>
+      <img src="/boat.png" alt="Submit" className="widget-icon" />
+      <h4>Submit Shipwreck</h4>
+      <p>Submit a new shipwreck for review</p>
+    </div>    
+      {/* Admin-only widgets */}
+      {account.admin && (
+        <>
+          <div className="widget" onClick={() => { fetchPending(); setShowPending(true); }}>
+            <img src="/boat.png" alt="Admin" className="widget-icon" />
+            <h4>Submit Ships</h4>
+            <p>Approve or reject newly submitted ships</p>
+          </div>
+        </>
+      )}
+      <div className="widget" onClick={() => alert("Settings clicked")}>
+            <img src="/boat.png" alt="Settings" className="widget-icon" />
+            <h4>Settings</h4>
+            <p>Change your account settings</p>
+      </div>
+      <div className="widget" onClick={handleLogout}>
+        <img src="/boat.png" alt="Logout" className="widget-icon" />
+        <h4>Logout</h4>
+        <p>Sign out of your account</p>
+    </div>
+    </div>
+  )}
+</div>
 
         {/* Map */}
         <div className="map-container">
@@ -616,10 +644,6 @@ const handleContactSupport = () => {
           
 {account && (
   <div className="bottom-left-buttons">
-    <button className="buttons" onClick={() => setShowSubmit(true)}>Submit Shipwreck</button>
-    <button className="buttons" onClick={() => setShowProfileCard(!showProfileCard)}>Profile</button>
-    <button className="buttons logout" onClick={handleLogout}>Logout</button>
-
     {/* Profile Card */}
     {showProfileCard && (
       <div className="profile-card">
