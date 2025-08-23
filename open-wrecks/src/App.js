@@ -453,7 +453,7 @@ const handleContactSupport = () => {
         <>
           <div className="widget" onClick={() => { fetchPending(); setShowPending(true); }}>
             <img src="/boat.png" alt="Admin" className="widget-icon" />
-            <h4>Submit Ships</h4>
+            <h4>Pending Ships</h4>
             <p>Approve or reject newly submitted ships</p>
           </div>
         </>
