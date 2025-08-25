@@ -1528,5 +1528,33 @@
     "capacity": "",
     "crew": "",
     "builder": ""
+  },
+  {
+    "id": 82,
+    "title": "Mediterranean sky ",
+    "lat": 38.024444,
+    "lng": 23.489167,
+    "imo": 5074226,
+    "description": "# Mediterranean Sky\n\nThe **Mediterranean Sky** was a Greek ferry ship originally launched in 1953 as the **City of York** for the British Ellerman Line. It was decommissioned in 1996 and now lies half-submerged in Eleusis Bay, Greece, where its wreck remains a tourist attraction.\n\n---\n\n## Ship Data\n- **Flag:** Greece  \n- **Original Name:** City of York (1953\u20131971)  \n- **Later Name:** Mediterranean Sky (1971\u20132003)  \n- **Type:** Ferry ship (Ellerman Quartet-class)  \n- **Shipyard:** Vickers-Armstrongs, Newcastle  \n- **Launched:** 30 March 1953  \n- **Decommissioned:** 10 August 1996  \n- **IMO Number:** 5074226  \n\n### Dimensions\n- **Length:** 164.9 m  \n- **Beam:** 21.7 m  \n- **Draught:** 8.68 m  \n- **Tonnage:** 14,941 GT  \n\n### Machinery\n- **Engines:** Doxford diesel engines  \n- **Power:** 9,437 kW (12,831 HP)  \n- **Speed:** 16.5 kn (service), 18.8 kn (max)  \n- **Propellers:** 2 fixed  \n\n### Capacity\n- **Passengers:** 946  \n\n---\n\n## History\n\n### City of York (1953\u20131971)\n- Built as part of the **Ellerman Quartet** series (with *City of Port Elizabeth*, *City of Exeter*, and *City of Durban*).  \n- Entered service in November 1953 on the London\u2013Beira route.  \n\n### Conversion to Mediterranean Sky (1971\u20131996)\n- Sold to **Karageorgis Lines** in 1971.  \n- Converted into a ferry in Perama, Greece.  \n- Commissioned in 1974, serving routes from **Ancona\u2013Rhodes** and later **Patras\u2013Ancona**.  \n- Facilities included pools, restaurants, bars, lounges, shops, and air-conditioned cabins.  \n\n### Decline and Wreck (1996\u20132003)\n- Withdrawn from service on **10 August 1996** due to financial problems.  \n- Laid up in Patras, later towed to Eleusis in February 1999.  \n- Began sinking in November 2002, towed to shallow waters.  \n- Capsized and left half-submerged in January 2003 near **Elefsina Shipyard**.  \n\n---\n\n## Legacy\n- The wreck remains visible and is a **popular tourist destination**.  \n- In 2019, German graffiti group **1UP** documented painting the hull.  \n\n---\n\n## Coordinates\n\ud83d\udccd **38\u00b001\u203228\u2033N, 23\u00b029\u203221\u2033E**\n\n---\n\n## External Links\n- [Commons: IMO 5074226 \u2013 Media Collection](https://commons.wikimedia.org/wiki/Category:IMO_5074226)  \n- [Technical data (faktaomfartyg.se)](http://www.faktaomfartyg.se)  \n- [Deck plan (ssmaritime.com)](http://www.ssmaritime.com)  \n\n---\n\n## Categories\n- Combined ship (UK)  \n- Passenger ship (Greece)  \n- Ferry  \n- Shipwreck (2003)  \n- RoPax ship  \n\n---\n",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/%22Mediterranean_Sky%22_-_Eleusis%2C_2002.jpg/250px-%22Mediterranean_Sky%22_-_Eleusis%2C_2002.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%22Mediterranean_Sky%22_-_Perama%2C_1986.jpg/250px-%22Mediterranean_Sky%22_-_Perama%2C_1986.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sunken_ship_-_panoramio.jpg/250px-Sunken_ship_-_panoramio.jpg"
+    ],
+    "links": [
+      "https://de.wikipedia.org/wiki/Mediterranean_Sky"
+    ],
+    "submitted_by": "alfredredbird",
+    "date": "2002",
+    "owner": "",
+    "port_of_registry": "",
+    "type": "Ferry ship",
+    "tonnage": "",
+    "draught": "8.68",
+    "length": "164.9",
+    "beam": "",
+    "capacity": "946",
+    "crew": "",
+    "builder": ""
   }
 ]
