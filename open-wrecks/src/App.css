@@ -13,12 +13,22 @@
 }
 
 .search-bar {
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  width: 220px; 
-  margin-left: 10; 
+  width: 240px;              
+  height: 38px;              
+  padding: 8px 12px;         
+  font-size: 15px;
+  border: 1px solid #ccc;    
+  border-radius: 8px;        
+  background-color: #fdfdfd;
+  font-family: 'Arial', sans-serif;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #1976d2;                   
+  box-shadow: 0 0 6px rgba(25,118,210,0.4); 
 }
 
 /* Layout */
@@ -796,3 +806,4 @@
   border-color: #1976d2;
   box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
 }
+

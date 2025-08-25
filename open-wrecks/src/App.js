@@ -16,6 +16,7 @@ import SignupWidget from "./components/SignupWidget";
 import SubmitWidget from "./components/SubmitWidget";
 import SidebarCarousel from "./components/SidebarCarousel";
 import Widget from "./components/Widget"
+import ProfileCard from "./components/ProfileCard";
 
 import useShips from "./hooks/useShips";
 import useAuth from "./hooks/useAuth";
@@ -695,17 +696,8 @@ const handleContactSupport = () => {
 
           </MapContainer>
           
-{account && (
-  <div className="bottom-left-buttons">
-    {/* Profile Card */}
-    {showProfileCard && (
-      <div className="profile-card">
-        <h3>{account.username}'s Profile</h3>
-        <button onClick={handleDeleteAccount}>Delete Account</button>
-        <button onClick={handleContactSupport}>Contact Support</button>
-      </div>
-    )}
-  </div>
+{account && showProfileCard && (
+  <ProfileCard account={account} onClose={() => setShowProfileCard(false)} />
 )}
 
 

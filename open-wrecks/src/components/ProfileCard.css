@@ -1,0 +1,68 @@
+.profile-card-wrapper {
+  position: fixed;
+  top: 500px; /* slight offset from top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none; /* allows clicks to go through except card */
+}
+
+.profile-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 380px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+  pointer-events: all; /* allow clicks inside */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Profile widget container */
+.profile-widget {
+  margin-bottom: 15px;
+}
+
+/* Bio styling */
+.bio {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* Stats flex */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+/* Favorite ships list */
+.favorite-ships ul {
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
