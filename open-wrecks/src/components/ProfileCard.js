@@ -28,14 +28,6 @@ export default function ProfileCard({ account, onClose }) {
           <div><strong>Favorite Ships:</strong> {account.favoriteShips?.length || 0}</div>
         </div>
 
-        {account.favoriteShips && account.favoriteShips.length > 0 && (
-          <div className="favorite-ships">
-            <h4>Favorite Ships</h4>
-            <ul>
-              {account.favoriteShips.map((ship, i) => <li key={i}>{ship}</li>)}
-            </ul>
-          </div>
-        )}
       </div>
     </div>
   );
