@@ -111,6 +111,7 @@ export default function SubmitWidget({ submitData, setSubmitData, handleSubmitSh
 
       <textarea
         placeholder="Description (Markdown)"
+        className="submit-textarea"
         value={submitData.description}
         onChange={(e) =>
           setSubmitData({ ...submitData, description: e.target.value })

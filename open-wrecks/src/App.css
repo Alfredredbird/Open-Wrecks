@@ -778,3 +778,21 @@
 .admin-section .widget:nth-child(5) { animation-delay: 0.5s; }
 .admin-section .widget:nth-child(6) { animation-delay: 0.7s; }
 
+.submit-textarea {
+  width: 93%;          /* matches other fields */
+  height: 80px;         /* roughly same height as typical inputs */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  resize: none;         /* prevents manual resizing to keep consistent height */
+  font-family: 'Arial', sans-serif;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.submit-textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
+}
