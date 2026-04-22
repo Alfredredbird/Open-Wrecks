@@ -90,7 +90,8 @@ Contributions are welcome!
 5. Open a Pull Request
 
 ## 📷 Images
-<img width="3772" height="2012" alt="image" src="https://github.com/user-attachments/assets/a024bf85-a525-4a19-b442-d74be008c985" />
+<img width="3828" height="2033" alt="image" src="https://github.com/user-attachments/assets/79811acc-e6f9-494b-b55d-4fbd1418ab9a" />
+
 
 
 
