@@ -6,12 +6,12 @@
     "name": "explorer",
     "country": "US",
     "id": 1,
-    "session": "eef7b5c6-6d4b-422d-8c98-af6aaa28acd0",
+    "session": "1fa4afac-1c46-46ea-865a-2eedf0c55176",
     "admin": true,
     "avatar": "boat.png",
     "bio": "am explorer",
     "likes": 1200,
-    "favoriteShips":  [
+    "favoriteShips": [
       "10",
       "72"
     ]
