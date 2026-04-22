@@ -12,15 +12,15 @@ It lets you record, manage, and visualize shipwrecks on an interactive map ~ wit
 ---
 
 ## ⚡ Features
-- 🔐 **Account System** – Sign up, log in, and manage submissions.
-- 🗺️ **Interactive Map** – Explore shipwreck locations visually with markers.
-- 📍 **Point Measurement System** – To measure the distance between ships/points.
-- 📝 **Submission Flow** – Users submit shipwreck data → admins approve → it shows on the map.
-- ⚛️ **Modern Stack** – Built with **React** frontend + **Flask (Python)** backend.
-- 🗾 **Updated Info** – Comes with **7 Map styles**, **9 ship recycling yards** and **81** ships (updated daily).
-- 💾 **Self-Hosted** – All data is stored locally, under *your* control.
-- 🔍 **View On Google Maps** – All ships have the option to view the location on Google Maps.
-- 🛠️ **Constant Updates** – I plan to update this project as much as possible.
+-  **Account System** – Sign up, log in, and manage submissions.
+-  **Interactive Map** – Explore shipwreck locations visually with markers.
+-  **Point Measurement System** – To measure the distance between ships/points.
+-  **Submission Flow** – Users submit shipwreck data → admins approve → it shows on the map.
+-  **Modern Stack** – Built with **React** frontend + **Flask (Python)** backend.
+-  **Updated Info** – Comes with **7 Map styles**, **9 ship recycling yards** and **81** ships (updated daily).
+-  **Self-Hosted** – All data is stored locally, under *your* control.
+-  **View On Google Maps** – All ships have the option to view the location on Google Maps.
+-  **Constant Updates** – I plan to update this project as much as possible.
 
 ---
 
